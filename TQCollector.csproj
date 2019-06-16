@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TQCollector</RootNamespace>
     <AssemblyName>TQCollector</AssemblyName>
-    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -176,14 +176,16 @@
     <None Include="TQCollector_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="itemdb.xml">
+    <None Include="itemdb.xml">
       <SubType>Designer</SubType>
-    </Resource>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="config.xml">
+    <None Include="config.xml">
       <SubType>Designer</SubType>
-    </Resource>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -242,9 +244,10 @@
     <Resource Include="ragnarok.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="text_en.xml">
+    <None Include="text_en.xml">
       <SubType>Designer</SubType>
-    </Resource>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="anniversary_edition.png" />
