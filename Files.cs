@@ -839,6 +839,7 @@ namespace TQCollector
                             if (!ParseTextDB(dbFile, "text\\commonequipment.txt")) return false;
                             if (!ParseTextDB(dbFile, "text\\uniqueequipment.txt")) return false;
                             if (!ParseTextDB(dbFile, "text\\ui.txt")) return false;
+                            if (!ParseTextDB(dbFile, "text\\quest.txt")) return false;
                             if (!ParseTextDB(dbFile, "text\\xcommonequipment.txt")) return false;
                             if (!ParseTextDB(dbFile, "text\\xuniqueequipment.txt")) return false;
                             if (!ParseTextDB(dbFile, "text\\xui.txt")) return false;
@@ -948,6 +949,16 @@ namespace TQCollector
                             }
                             label = label.Trim();
                         }
+
+                        // small hack for a set name introduced in patch 2.10 #3 to remove a '{^n}' format string
+                        if (filename.Contains("quest") && !filename.Contains("x2"))
+                        {
+                            if (label.IndexOf('{') != -1)
+                            {
+                                label = label.Substring(0, label.IndexOf('{'));
+                            }
+                        }
+
                         string key = fields[0].Trim();
 
                         if (!textDB.ContainsKey(key))
