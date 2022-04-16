@@ -1,7 +1,7 @@
 # TQCollector
 Source/binaries for TQCollector, a tool for item collectors in Titan Quest including all expansions. Check which items are missing from your collection. Works well together with [TQVault](https://github.com/EtienneLamoureux/TQVaultAE)
 
-insert screenshot here
+![screen](https://raw.githubusercontent.com/Malgardian/TQCollector/master/tqc_screen.png)
 
 ## Contributors
 - BeaverusIV (original author, development 2009 - 2018)
