@@ -98,3 +98,7 @@ v1.3.0.0 05/12/2021 (Eternal Embers)
 
 v1.3.0.1 13/02/2022
 - added entries for Atlantis MIs that now drop
+
+v1.3.1.0 16/04/2022
+- added newly introduced items
+- added a workaround for the name of a new set made up of old items
