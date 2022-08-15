@@ -1,10 +1,14 @@
 ﻿using System.Xml.Serialization;
 using System.IO;
+using System.Linq;
 using System.Collections;
 using System.Text;
 using System.Windows;
 using System.Collections.Generic;
 using Microsoft.Win32;
+using TQVaultAE.Data.Dto;
+using Newtonsoft.Json;
+using System;
 
 namespace TQCollector
 {
@@ -388,20 +392,20 @@ namespace TQCollector
                 }
             }
 
-            amulet.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            bracer.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            armor.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            greaves.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            helm.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            ring.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            shield.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            axe.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            bow.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            club.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            spear.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            staff.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            sword.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
-            ohranged.Sort(delegate(Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            amulet.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            bracer.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            armor.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            greaves.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            helm.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            ring.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            shield.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            axe.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            bow.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            club.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            spear.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            staff.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            sword.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
+            ohranged.Sort(delegate (Item p1, Item p2) { return p1.name.CompareTo(p2.name); });
 
             retSet[0] = new Set();
             retSet[0].name = "uheader01";
@@ -540,7 +544,7 @@ namespace TQCollector
                 MessageBox.Show(Files.Language["error01"]);
                 return false;
             }
-            if(Files.Configuration.Directories.TQ == "null" && Files.Configuration.Directories.IT == "null" && Files.Configuration.Directories.AE == "null")
+            if (Files.Configuration.Directories.TQ == "null" && Files.Configuration.Directories.IT == "null" && Files.Configuration.Directories.AE == "null")
             {
                 Directories d = new Directories(true);
 
@@ -584,7 +588,7 @@ namespace TQCollector
         public static bool reloadFiles()
         {
             //reload language
-            if(!LoadLanguage()) return false;
+            if (!LoadLanguage()) return false;
             //Close ItemDB
             XMLItemDB = null;
             //Load itemdb.xml
@@ -646,7 +650,7 @@ namespace TQCollector
                     {
                         //Default path
                         string defaultVaultPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "My Games\\Titan Quest\\TQVaultData");
-                        if(Directory.Exists(defaultVaultPath))
+                        if (Directory.Exists(defaultVaultPath))
                         {
                             XMLConfig.Directories.Vaults = defaultVaultPath;
                         }
@@ -1120,7 +1124,7 @@ namespace TQCollector
 
                         if (dirEntry == null)
                         {
-                            if(!file.Contains("Throne")) MessageBox.Show("text_" + Files.Configuration.Language + ".arc:\\" + filename + Files.Language["error14"]);
+                            if (!file.Contains("Throne")) MessageBox.Show("text_" + Files.Configuration.Language + ".arc:\\" + filename + Files.Language["error14"]);
                             return null;
                         }
 
@@ -1180,7 +1184,7 @@ namespace TQCollector
                 {
                     MessageBox.Show(Files.Language["error15"] + " text_" + Files.Configuration.Language + ".arc.");
                 }
-                
+
                 return ans;
             }
 
@@ -1234,7 +1238,7 @@ namespace TQCollector
         public static Set[] removeR(Set[] sets) //removes Ragnarök items from display
         {
             List<Set> ls = new List<Set>();
-            
+
             foreach (Set s in sets) //create a new set of items not from Ragnarök
             {
                 List<Item> nor = new List<Item>();
@@ -1270,7 +1274,7 @@ namespace TQCollector
         public static Set[] removeAtl(Set[] sets) //removes Atlantis items from display
         {
             List<Set> ls = new List<Set>();
-            
+
             foreach (Set s in sets) //create a new set of items not from Atlantis
             {
                 List<Item> noatl = new List<Item>();
@@ -1428,14 +1432,28 @@ namespace TQCollector
     {
         public static bool LoadVaults()
         {
-            byte[] raw_data; //Vault data
-            FileStream file;
-            BinaryReader br;
-            MemoryStream ms;
-            BinaryReader reader;
-            DirectoryInfo di;
-            FileInfo[] rgFiles;
+            if (!VaultsDirExists())
+                return false;
 
+            var di = new DirectoryInfo(Files.Configuration.Directories.Vaults);
+            var rgFilesClassic = di.GetFiles("*.vault");
+            var rgFilesJson = di.GetFiles("*.vault.json");
+
+            //No need to loop here, the program can load and they can change manually.
+            if (rgFilesJson.Length == 0 && rgFilesClassic.Length == 0)
+            {
+                MessageBox.Show(Files.Language["error17"]);
+                return false;
+            }
+
+            var classicLoadSuccess = LoadVaultsClassic(rgFilesClassic);
+            var jsonLoadSuccess = LoadVaultsJSON(rgFilesJson);
+
+            return classicLoadSuccess || jsonLoadSuccess;
+        }
+
+        public static bool VaultsDirExists()
+        {
             //Make sure we have a valid directory. Show a dialog box allowing user to change it until we get one.
             if (!Directory.Exists(Files.Configuration.Directories.Vaults))
             {
@@ -1445,11 +1463,34 @@ namespace TQCollector
                 MessageBox.Show(Files.Language["error16"]);
                 return false;
             }
+            return true;
+        }
 
-            di = new DirectoryInfo(Files.Configuration.Directories.Vaults);
-            rgFiles = di.GetFiles("*.vault");
-            //No need to loop here, the program can load and they can change manually.
-            if (rgFiles.Length == 0) MessageBox.Show(Files.Language["error17"]);
+        public static bool LoadVaultsJSON(IEnumerable<FileInfo> rgFiles)
+        {
+            foreach (FileInfo fi in rgFiles)
+            {
+                try
+                {
+                    ParseJsonData(fi.FullName);
+                }
+                catch
+                {
+                    MessageBox.Show(Files.Language["error18"]);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public static bool LoadVaultsClassic(IEnumerable<FileInfo> rgFiles)
+        {
+            byte[] raw_data; //Vault data
+            FileStream file;
+            BinaryReader br;
+            MemoryStream ms;
+            BinaryReader reader;
 
             foreach (FileInfo fi in rgFiles)
             {
@@ -1491,6 +1532,77 @@ namespace TQCollector
             return true;
         }
 
+        private static void ParseJsonData(string path)
+        {
+            var vault = Path.GetFileName(path);
+            using (var jsonfile = new StreamReader(path, Encoding.UTF8))
+            {
+                var vaultDto = new JsonSerializer().Deserialize(jsonfile, typeof(VaultDto)) as VaultDto;
+
+                vaultDto.sacks.SelectMany((Sack, SackIndex) => Sack.items.Select(Item => new { Item, SackIndex })).ToList().ForEach(Infos =>
+                {
+                    var baseItemID = Infos.Item.baseName;
+                    if (string.IsNullOrWhiteSpace(baseItemID))
+                        return;
+
+                    int sack = Infos.SackIndex + 1;
+                    var var1 = Infos.Item.var1;
+                    var relicID = Infos.Item.relicName;
+                    var relicID2 = Infos.Item.relicName2;
+
+                    ParseItemLogic(vault, sack, ref baseItemID, var1, ref relicID, ref relicID2);
+                });
+            }
+        }
+
+        private static void ParseItemLogic(string vault, int sack, ref string baseItemID, int var1, ref string relicID, ref string relicID2)
+        {
+            #region Copy/Paste from old ParseItem()
+
+            int o = baseItemID.LastIndexOf("records");
+            if (o < 0) o = 0;
+            baseItemID = baseItemID.Substring(o + 8);
+            baseItemID = baseItemID.ToLower(System.Globalization.CultureInfo.InvariantCulture);
+
+            if (baseItemID.Contains("\\animalrelics\\") || baseItemID.Contains("\\charms\\")) //A charm
+            {
+                if (var1 == 5 || baseItemID.Contains("quest_artifice"))
+                {
+                    Files.ItemDatabase.addItem(baseItemID, string.Format(Files.Language["mouseover04"], vault, sack.ToString()));
+                }
+            }
+            else if (baseItemID.Contains("\\relics\\")) //A relic
+            {
+                if (var1 == 3 || baseItemID.Contains("nerthusmistletoe"))
+                {
+                    Files.ItemDatabase.addItem(baseItemID, string.Format(Files.Language["mouseover04"], vault, sack.ToString()));
+                }
+            }
+            else
+            {
+                Files.ItemDatabase.addItem(baseItemID, string.Format(Files.Language["mouseover04"], vault, sack.ToString()));
+            }
+
+            if (Files.Configuration.UseSocketed && !relicID.Equals(""))
+            {
+                int oo = relicID.LastIndexOf("records");
+                if (oo < 0) oo = 0;
+                relicID = relicID.Substring(oo + 8);
+                relicID = relicID.ToLower(System.Globalization.CultureInfo.InvariantCulture);
+                Files.ItemDatabase.addItem(relicID, string.Format(Files.Language["mouseover05"], vault, sack.ToString()));
+                if (!relicID2.Equals(""))
+                {
+                    int ooo = relicID2.LastIndexOf("records");
+                    if (ooo < 0) ooo = 0;
+                    relicID2 = relicID2.Substring(ooo + 8);
+                    relicID2 = relicID2.ToLower(System.Globalization.CultureInfo.InvariantCulture);
+                    Files.ItemDatabase.addItem(relicID2, string.Format(Files.Language["mouseover05"], vault, sack.ToString()));
+                }
+            }
+
+            #endregion
+        }
+
         private static void ParseItemBlock(int loc, BinaryReader reader, string vault)
         {
             reader.BaseStream.Seek(loc, SeekOrigin.Begin);
@@ -1516,7 +1628,7 @@ namespace TQCollector
 
             if (Files.Configuration.UseIT || Files.Configuration.UseAE)
             {
-                if(!Directory.Exists(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "My Games\\Titan Quest - Immortal Throne\\SaveData\\Main")))
+                if (!Directory.Exists(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "My Games\\Titan Quest - Immortal Throne\\SaveData\\Main")))
                 {
                     players = null;
                 }
@@ -1527,7 +1639,7 @@ namespace TQCollector
             }
             else
             {
-                if(!Directory.Exists(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "My Games\\Titan Quest\\SaveData\\Main")))
+                if (!Directory.Exists(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "My Games\\Titan Quest\\SaveData\\Main")))
                 {
                     players = null;
                 }
@@ -1863,10 +1975,10 @@ namespace TQCollector
 
             ValidateNextString("var1", b);
             int var1 = b.ReadInt32();
- 
+
             //Atlantis added second relic
             string an = ReadString(b);
-            string relicID2 ="";
+            string relicID2 = "";
             if (an.Equals("relicName2"))
             {
                 relicID2 = ReadString(b);
@@ -1897,47 +2009,8 @@ namespace TQCollector
 
             ValidateNextString("end_block", b);
             int endBlockCrap1 = b.ReadInt32();
-            
-            int o = baseItemID.LastIndexOf("records");
-            if (o < 0) o = 0;
-            baseItemID = baseItemID.Substring(o + 8);
-            baseItemID = baseItemID.ToLower(System.Globalization.CultureInfo.InvariantCulture);
 
-            if (baseItemID.Contains("\\animalrelics\\") || baseItemID.Contains("\\charms\\")) //A charm
-            {
-                if (var1 == 5 || baseItemID.Contains("quest_artifice"))
-                {
-                    Files.ItemDatabase.addItem(baseItemID, string.Format(Files.Language["mouseover04"], vault, sack.ToString()));
-                }
-            }
-            else if (baseItemID.Contains("\\relics\\")) //A relic
-            {
-                if (var1 == 3 || baseItemID.Contains("nerthusmistletoe"))
-                {
-                    Files.ItemDatabase.addItem(baseItemID, string.Format(Files.Language["mouseover04"], vault, sack.ToString()));
-                }
-            }
-            else
-            {
-                Files.ItemDatabase.addItem(baseItemID, string.Format(Files.Language["mouseover04"], vault, sack.ToString()));
-            }
-
-            if (Files.Configuration.UseSocketed && !relicID.Equals(""))
-            {
-                int oo = relicID.LastIndexOf("records");
-                if (oo < 0) oo = 0;
-                relicID = relicID.Substring(oo + 8);
-                relicID = relicID.ToLower(System.Globalization.CultureInfo.InvariantCulture);
-                Files.ItemDatabase.addItem(relicID, string.Format(Files.Language["mouseover05"], vault, sack.ToString()));
-                if (!relicID2.Equals(""))
-                {
-                    int ooo = relicID2.LastIndexOf("records");
-                    if (ooo < 0) ooo = 0;
-                    relicID2 = relicID2.Substring(ooo + 8);
-                    relicID2 = relicID2.ToLower(System.Globalization.CultureInfo.InvariantCulture);
-                    Files.ItemDatabase.addItem(relicID2, string.Format(Files.Language["mouseover05"], vault, sack.ToString()));
-                }
-            }
+            ParseItemLogic(vault, sack, ref baseItemID, var1, ref relicID, ref relicID2);
         }
 
         private static void ParseEquipItem(System.IO.BinaryReader b, string player)
@@ -2104,33 +2177,33 @@ namespace TQCollector
 
         private static void ParseStashItemBlock(BinaryReader reader, string player)
         {
-			reader.BaseStream.Seek (0, SeekOrigin.Begin);
+            reader.BaseStream.Seek(0, SeekOrigin.Begin);
 
-			int m_checksum = reader.ReadInt32();
+            int m_checksum = reader.ReadInt32();
 
-			ValidateNextString ("begin_block", reader);
-			int m_beginBlockCrap = reader.ReadInt32();
+            ValidateNextString("begin_block", reader);
+            int m_beginBlockCrap = reader.ReadInt32();
 
-			ValidateNextString ("stashVersion", reader);
-			int m_stashVersion = reader.ReadInt32();
+            ValidateNextString("stashVersion", reader);
+            int m_stashVersion = reader.ReadInt32();
 
-			ValidateNextString ("fName", reader);
-			int len = reader.ReadInt32();
-			byte[] m_fName = reader.ReadBytes(len);
+            ValidateNextString("fName", reader);
+            int len = reader.ReadInt32();
+            byte[] m_fName = reader.ReadBytes(len);
 
-			ValidateNextString ("sackWidth", reader);
-			int m_sackWidth = reader.ReadInt32();
+            ValidateNextString("sackWidth", reader);
+            int m_sackWidth = reader.ReadInt32();
 
-			ValidateNextString ("sackHeight", reader);
-			int m_sackHeight = reader.ReadInt32();
+            ValidateNextString("sackHeight", reader);
+            int m_sackHeight = reader.ReadInt32();
 
-			ParseStashSack(reader, player);
+            ParseStashSack(reader, player);
         }
 
         private static void ParseStashItem(System.IO.BinaryReader b, string player)
         {
             ValidateNextString("stackCount", b);
-			int beginBlockCrap1 = b.ReadInt32();
+            int beginBlockCrap1 = b.ReadInt32();
 
             ValidateNextString("begin_block", b);
             int beginBlockCrap3 = b.ReadInt32();
@@ -2182,10 +2255,10 @@ namespace TQCollector
             }
 
             ValidateNextString("xOffset", b);
-			float x = b.ReadSingle();
+            float x = b.ReadSingle();
 
-			ValidateNextString("yOffset", b);
-			float y = b.ReadSingle();
+            ValidateNextString("yOffset", b);
+            float y = b.ReadSingle();
 
             int o = baseItemID.LastIndexOf("records");
             if (o < 0) o = 0;
@@ -2264,8 +2337,8 @@ namespace TQCollector
 
         private static void ParseStashSack(System.IO.BinaryReader b, string player)
         {
-            ValidateNextString ("numItems", b);
-			int size = b.ReadInt32();
+            ValidateNextString("numItems", b);
+            int size = b.ReadInt32();
 
             for (int i = 0; i < size; ++i)
             {
