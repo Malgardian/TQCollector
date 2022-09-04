@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://localhost/TQCConfig" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://localhost/TQCConfig">
+  <xs:element name="Config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Directories"/>
+        <xs:element name="UseInventories" type="xs:boolean"/>
+        <xs:element name="UseCaravan" type="xs:boolean"/>
+        <xs:element name="UseVaults" type="xs:boolean"/>
+        <xs:element name="UseIT" type="xs:boolean"/>
+        <xs:element name="UseSP" type="xs:boolean"/>
+        <xs:element name="UseAE" type="xs:boolean"/>
+        <xs:element name="UseR" type="xs:boolean"/>
+        <xs:element name="UseAtl" type="xs:boolean"/>
+        <xs:element name="UseEE" type="xs:boolean"/>
+        <xs:element name="Language" type="xs:string"/>
+        <xs:element name="UseItemCount" type="xs:boolean"/>
+        <xs:element name="UseItemOwned" type="xs:boolean" default="true"/>
+        <xs:element name="UseItemNameCount" type="xs:boolean"/>
+        <xs:element name="UseCheckBox" type="xs:boolean"/>
+        <xs:element name="UseSocketed" type="xs:boolean"/>
+        <xs:element name="RefreshTimer" type="xs:integer" default="180"/>
+        <xs:element ref="Filters"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Directories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Vaults" type="xs:string"/>
+        <xs:element name="TQ" type="xs:string"/>
+        <xs:element name="IT" type="xs:string"/>
+        <xs:element name="AE" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Filters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MonsterInfrequent"/>
+        <xs:element ref="Relics"/>
+        <xs:element ref="Charms"/>
+        <xs:element ref="Artifacts"/>
+        <xs:element ref="Sets"/>
+        <xs:element ref="Uniques"/>
+        <xs:element ref="Parchments"/>
+        <xs:element ref="Formulae"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonsterInfrequent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+        <xs:element ref="Normal"/>
+        <xs:element ref="Epic"/>
+        <xs:element ref="Legendary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Relics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+        <xs:element ref="Normal"/>
+        <xs:element ref="Epic"/>
+        <xs:element ref="Legendary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Charms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+        <xs:element ref="Normal"/>
+        <xs:element ref="Epic"/>
+        <xs:element ref="Legendary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Artifacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+        <xs:element ref="Normal"/>
+        <xs:element ref="Epic"/>
+        <xs:element ref="Legendary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+        <xs:element ref="Epic"/>
+        <xs:element ref="Legendary"/>
+        <xs:element ref="Count"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Count" type="xs:boolean"/>
+  <xs:element name="Uniques">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="Amount"/>
+      <xs:element ref="Epic"/>
+      <xs:element ref="Legendary"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Parchments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Formulae">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+        <xs:element ref="Normal"/>
+        <xs:element ref="Epic"/>
+        <xs:element ref="Legendary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Amount">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="None"/>
+        <xs:enumeration value="Some"/>
+        <xs:enumeration value="All"/>
+        <xs:enumeration value="Any"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Normal" type="xs:boolean"/>
+  <xs:element name="Epic" type="xs:boolean"/>
+  <xs:element name="Legendary" type="xs:boolean"/>
+</xs:schema>
