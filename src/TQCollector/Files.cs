@@ -1542,7 +1542,7 @@ namespace TQCollector
                 vaultDto.sacks.SelectMany((Sack, SackIndex) => Sack.items.Select(Item => new { Item, SackIndex })).ToList().ForEach(Infos =>
                 {
                     var baseItemID = Infos.Item.baseName;
-                    if (string.IsNullOrWhiteSpace(baseItemID))
+                    if (baseItemID == null || baseItemID.Trim() == string.Empty)
                         return;
 
                     int sack = Infos.SackIndex + 1;

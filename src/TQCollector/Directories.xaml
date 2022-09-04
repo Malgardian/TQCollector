@@ -11,14 +11,14 @@
         <Button Content="Default" Height="23" HorizontalAlignment="Left" Margin="636.352,196.991,0,-84.19" Name="Default_IT" VerticalAlignment="Top" Width="75" Click="Default_IT_Click" IsEnabled="False" />
         <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="555.352,267.011,0,-154.21" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" IsCancel="True" />
         <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="635.352,267.011,0,-154.21" Name="button5" VerticalAlignment="Top" Width="75" Click="button5_Click" IsEnabled="False" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,122.491,0,-9.69" Name="Text_Vault" VerticalAlignment="Top" Width="445" IsReadOnly="True" FontSize="14" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,171.991,0,-59.19" Name="Text_TQ" VerticalAlignment="Top" Width="445" Background="White" BorderBrush="#FFABADB3" IsReadOnly="True" FontSize="14" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,197.991,0,-85.19" Name="Text_IT" VerticalAlignment="Top" Width="445" IsReadOnly="True" FontSize="14" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,122.491,0,-9.69" Name="Text_Vault" VerticalAlignment="Top" Width="445" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,171.991,0,-59.19" Name="Text_TQ" VerticalAlignment="Top" Width="445" Background="White" BorderBrush="#FFABADB3" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,197.991,0,-85.19" Name="Text_IT" VerticalAlignment="Top" Width="445" IsReadOnly="True" />
         <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="602.352,122.491,0,-9.69" Name="Browse_Vault" VerticalAlignment="Top" Width="28" Click="Browse_Vault_Click" IsEnabled="False" />
         <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="602.352,171.991,0,-59.19" Name="Browse_TQ" VerticalAlignment="Top" Width="28" Click="Browse_TQ_Click" IsEnabled="False" />
         <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="602.352,196.991,0,-84.19" Name="Browse_IT" VerticalAlignment="Top" Width="28" Click="Browse_IT_Click" IsEnabled="False" />
         <Label Content="Anniversary Edition path:" Height="28" HorizontalAlignment="Left" Margin="0,222.031,0,-114.23" x:Name="label4" VerticalAlignment="Top" Width="148.892" HorizontalContentAlignment="Right" IsEnabled="False" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,223.511,0,-110.71" x:Name="Text_AE" VerticalAlignment="Top" Width="445" IsReadOnly="True" FontSize="14" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="148.352,223.511,0,-110.71" x:Name="Text_AE" VerticalAlignment="Top" Width="445" IsReadOnly="True" />
         <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="602.352,223.511,0,-110.71" x:Name="Browse_AE" VerticalAlignment="Top" Width="28" Click="Browse_AE_Click" IsEnabled="False" />
         <Button Content="Default" Height="23" HorizontalAlignment="Left" Margin="636.352,223.511,0,-110.71" x:Name="Default_AE" VerticalAlignment="Top" Width="75" Click="Default_AE_Click" IsEnabled="False" />
         <Button x:Name="button" Content="Titan Quest" HorizontalAlignment="Left" Margin="183.588,10,0,0" VerticalAlignment="Top" Width="119.049" Height="91.319" Click="button_Click"/>
