@@ -1478,6 +1478,9 @@
         <Item dbr="xpack4\item\equipmentweapon\staff\mi_l_heretic_coldstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\mi_l_heretic_firestaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\mi_l_heretic_lightningstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_coldstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_firestaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_lightningstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
     </Legendary>
   </MonsterInfrequent>
@@ -2238,16 +2241,16 @@
         <Item dbr="xpack\item\equipmentweapons\staff\usm_n_001.dbr" id="xtagUWeapon083" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
       </Set>
       <Set name="xtagCharacterClass08">
-        <Item dbr="xpack\item\equipmentarmor\helm\um_e_001.dbr" id="xtagUArmor116" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack\item\equipmentarmor\torso\um_e_001.dbr" id="xtagUArmor037" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack\item\equipmentarmor\armband\um_e_002.dbr" id="xtagUArmor064" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack\item\equipmentarmor\greaves\um_e_002.dbr" id="xtagUArmor091" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\equipmentarmor\helm\um_e_001.dbr" id="xtagUArmor116" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
+        <Item dbr="xpack\item\equipmentarmor\torso\um_e_001.dbr" id="xtagUArmor037" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
+        <Item dbr="xpack\item\equipmentarmor\armband\um_e_002.dbr" id="xtagUArmor064" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
+        <Item dbr="xpack\item\equipmentarmor\greaves\um_e_002.dbr" id="xtagUArmor091" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
       </Set>
       <Set name="tagRumorGr4Title">
-        <Item dbr="xpack\item\equipmentarmor\helm\u_n_001.dbr" id="xtagUArmor109" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack\item\equipmentarmor\greaves\u_n_001.dbr" id="xtagUArmor081" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack\item\equipmentarmor\torso\u_n_001.dbr" id="xtagUArmor031" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack\item\equipmentarmor\armband\u_n_001.dbr" id="xtagUArmor056" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\equipmentarmor\helm\u_n_001.dbr" id="xtagUArmor109" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
+        <Item dbr="xpack\item\equipmentarmor\greaves\u_n_001.dbr" id="xtagUArmor081" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
+        <Item dbr="xpack\item\equipmentarmor\torso\u_n_001.dbr" id="xtagUArmor031" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
+        <Item dbr="xpack\item\equipmentarmor\armband\u_n_001.dbr" id="xtagUArmor056" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
       </Set>
       <Set name="x2tagSet005">
         <Item dbr="xpack2\item\equipmentarmor\helm\us_n_brennus.dbr" id="x2tagUArmor016" isIT="true" isR="true" isAtl="false" isEE="false" find="@level04$: @act06$, @level05$: @act01$"/>
@@ -2711,7 +2714,6 @@
         <Item dbr="item\equipmentarmor\u_n_waylayer'sjerkin.dbr" id="tagUArmor340" isIT="false" isR="false" isAtl="false" isEE="false" find="@level04$: @act01$"/>
         <Item dbr="item\equipmentarmor\um_e_ymochelsriddlerobe.dbr" id="tagUArmor348" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @act03$, @level06$: @act03$"/>
         <Item dbr="item\equipmentarmor\um_n_yuya'sgarb.dbr" id="tagUArmor360" isIT="false" isR="false" isAtl="false" isEE="false" find="@level04$: @act02$"/>
-        <Item dbr="xpack\item\equipmentarmor\torso\u_n_001.dbr" id="xtagUArmor031" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\torso\um_n_003.dbr" id="xtagUArmor036" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\torso\um_n_002.dbr" id="xtagUArmor035" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\torso\um_n_001.dbr" id="xtagUArmor034" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
@@ -2819,7 +2821,6 @@
         <Item dbr="item\equipmentarmband\u_n_thornybracers.dbr" id="tagUArmor107" isIT="false" isR="false" isAtl="false" isEE="false" find="@level04$: @act01$"/>
         <Item dbr="xpack\item\equipmentarmor\armband\um_n_001.dbr" id="xtagUArmor060" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\armband\um_n_002.dbr" id="xtagUArmor061" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
-        <Item dbr="xpack\item\equipmentarmor\armband\u_n_001.dbr" id="xtagUArmor056" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\armband\u_n_002.dbr" id="xtagUArmor057" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\armband\um_n_003.dbr" id="xtagUArmor062" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack2\item\equipmentarmor\armband\u_n_02.dbr" id="x2tagUArmor074" isIT="true" isR="true" isAtl="false" isEE="false" find="@level04$: @act06$, @level05$: @act01$"/>
@@ -2878,7 +2879,6 @@
         <Item dbr="item\equipmentgreaves\u_e_nebuchadnezzar'sgreaves.dbr" id="tagUArmor143" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @act02$, @act03$; @level06$: @act02$, @act03$"/>
         <Item dbr="item\equipmentgreaves\u_n_mediangreaves.dbr" id="tagUArmor150" isIT="false" isR="false" isAtl="false" isEE="false" find="@level04$: @act02$, @act03$, @act04$"/>
         <Item dbr="item\equipmentgreaves\um_e_taklamakanleggings.dbr" id="tagUArmor144" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @act02$, @act03$; @level06$: @act02$, @act03$"/>
-        <Item dbr="xpack\item\equipmentarmor\greaves\u_n_001.dbr" id="xtagUArmor081" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\greaves\um_n_002.dbr" id="xtagUArmor088" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\greaves\u_n_002.dbr" id="xtagUArmor082" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\greaves\um_n_003.dbr" id="xtagUArmor089" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
@@ -2914,7 +2914,6 @@
         <Item dbr="item\equipmenthelm\u_e_shadowmeld.dbr" id="tagUArmor197" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @act01$; @level06$: @act01$, @act02$"/>
         <Item dbr="item\equipmenthelm\u_n_shriekinghelm.dbr" id="tagUArmor209" isIT="false" isR="false" isAtl="false" isEE="false" find="@level04$: @act03$, @act04$"/>
         <Item dbr="item\equipmenthelm\um_n_whitecrown.dbr" id="tagUArmor210" isIT="false" isR="false" isAtl="false" isEE="false" find="@level04$: @act02$"/>
-        <Item dbr="xpack\item\equipmentarmor\helm\u_n_001.dbr" id="xtagUArmor109" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\helm\um_n_003.dbr" id="xtagUArmor115" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\helm\um_n_002.dbr" id="xtagUArmor114" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\helm\um_n_001.dbr" id="xtagUArmor113" isIT="true" isR="false" isAtl="false" isEE="false" find="@level04$: @act04$"/>
@@ -3229,7 +3228,6 @@
         <Item dbr="item\equipmentarmor\u_e_vestmentofthomthemad.dbr" id="tagUArmor291" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @act02$, @level06$: @act02$"/>
         <Item dbr="item\equipmentarmor\u_l_wyrmskinharness.dbr" id="tagUArmor307" isIT="false" isR="false" isAtl="false" isEE="false" find="@level06$: @act03$"/>
         <Item dbr="xpack\item\equipmentarmor\torso\u_l_001.dbr" id="xtagUArmor033" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
-        <Item dbr="xpack\item\equipmentarmor\torso\um_e_001.dbr" id="xtagUArmor037" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\torso\um_l_001.dbr" id="xtagUArmor039" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\torso\um_l_002.dbr" id="xtagUArmor040" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\torso\um_e_002.dbr" id="xtagUArmor038" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
@@ -3347,7 +3345,6 @@
         <Item dbr="xpack\item\equipmentarmor\armband\u_l_002.dbr" id="xtagUArmor059" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\armband\um_l_001.dbr" id="xtagUArmor066" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\armband\um_e_001.dbr" id="xtagUArmor063" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
-        <Item dbr="xpack\item\equipmentarmor\armband\um_e_002.dbr" id="xtagUArmor064" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\armband\um_e_003.dbr" id="xtagUArmor065" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack2\item\equipmentarmor\armband\u_e_01.dbr" id="x2tagUArmor068" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$, @level06$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\armband\u_e_02.dbr" id="x2tagUArmor069" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$, @level06$: @act01$"/>
@@ -3419,7 +3416,6 @@
         <Item dbr="item\equipmentgreaves\u_l_hermes'talaria.dbr" id="tagUArmor145" isIT="false" isR="false" isAtl="false" isEE="false" find="@level06$: @amount07$"/>
         <Item dbr="item\equipmentgreaves\u_e_murkcrawlers.dbr" id="tagUArmor142" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @amount07$, @level06$: @amount07$"/>
         <Item dbr="xpack\item\equipmentarmor\greaves\u_e_001.dbr" id="xtagUArmor083" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
-        <Item dbr="xpack\item\equipmentarmor\greaves\um_e_002.dbr" id="xtagUArmor091" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\greaves\um_l_002.dbr" id="xtagUArmor094" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\greaves\u_e_002.dbr" id="xtagUArmor084" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\greaves\um_e_003.dbr" id="xtagUArmor092" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
@@ -3472,7 +3468,6 @@
         <Item dbr="xpack\item\equipmentarmor\helm\um_l_001.dbr" id="xtagUArmor118" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\helm\um_e_002.dbr" id="xtagUArmor117" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\helm\u_l_001.dbr" id="xtagUArmor112" isIT="true" isR="false" isAtl="false" isEE="false" find="@level06$: @act04$"/>
-        <Item dbr="xpack\item\equipmentarmor\helm\um_e_001.dbr" id="xtagUArmor116" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack\item\equipmentarmor\helm\u_e_001.dbr" id="xtagUArmor111" isIT="true" isR="false" isAtl="false" isEE="false" find="@level05$: @act04$, @level06$: @act04$"/>
         <Item dbr="xpack2\item\equipmentarmor\helm\u_e_01.dbr" id="x2tagUArmor052" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$, @level06$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\helm\u_e_02.dbr" id="x2tagUArmor053" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$, @level06$: @act01$"/>
@@ -3648,9 +3643,6 @@
         <Item dbr="xpack4\item\equipmentweapon\staff\u_l_pearlstaffofshen.dbr" id="x4tagU_Staff04" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\u_l_strengthofthenile.dbr" id="x4tagU_Staff01" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\u_l_yusacrifice.dbr" id="x4tagU_Staff05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
-        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_coldstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
-        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_firestaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
-        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_lightningstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\u_l_encompassingthought.dbr" id="x4tagU_Staff07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
       <Set name="uheader13">
