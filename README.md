@@ -10,6 +10,7 @@ Source/binaries for TQCollector, a tool for item collectors in Titan Quest inclu
 - Sekkyumu (toolbar icons, except TQ expansion icons)
 - bman654 and contributors (TQVault code for opening TQ files)
 - Arperum (bug testing/fixing)
+- hguy (JSON parser for TQVault v4.0+ files)
 - Translators:
   - German: Malgardian
   - French: AlcyonV, Wagi, W.N.G.
