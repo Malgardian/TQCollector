@@ -103,7 +103,8 @@ v1.3.1.0 16/04/2022
 - added newly introduced items
 - added a workaround for the name of a new set made up of old items
 
-v1.3.2.0 26/08/2022 by hguy
-- added TQVaultAE Json file compatibility
-- fixed xml files not deploying at build time
-- Repository & solution organization normalization
+v1.4.0.0 18/09/2022
+- added TQVaultAE v4.0+ JSON file compatibility (thanks to hguy)
+- fixed xml files not deploying at build time (thanks to hguy)
+- Repository & solution organization normalization (thanks to hguy)
+- updated item list & credits
