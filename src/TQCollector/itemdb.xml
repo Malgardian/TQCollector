@@ -1667,6 +1667,7 @@
         <Item dbr="xpack4\item\relics\03_x4_incarnationofserketstouch.dbr" id="x4tagU_Relic_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\relics\03_x4_incarnationofsobeksanctuary.dbr" id="x4tagU_Relic_01" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\relics\03_x4_incarnationofthetaotiesgluttony.dbr" id="x4tagU_Relic_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\03_x4_essenceofchaos.dbr" id="x4tagU_Relic_06" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
     </Legendary>
   </Relics>
@@ -1708,6 +1709,7 @@
         <Item dbr="xpack3\items\charms\01_x3_coralfragment.dbr" id="x3tag_animalpart02" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\charms\01_x3_insectwings.dbr" id="x3tag_animalpart03" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\charms\01_x3_quest_artifice.dbr" id="x3tag_animalpart04" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\05_x4_goldenscarab_n_charm.dbr" id="x4tag_N_GoldenScarab" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
     </Normal>
     <Epic>
@@ -1747,6 +1749,7 @@
         <Item dbr="xpack3\items\charms\02_x3_coralfragment.dbr" id="x3tag_animalpart02_e" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\charms\02_x3_insectwings.dbr" id="x3tag_animalpart03_e" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\charms\02_x3_quest_artifice.dbr" id="x3tag_animalpart04_e" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\05_x4_goldenscarab_e_charm.dbr" id="x4tag_E_GoldenScarab" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
     </Epic>
     <Legendary>
@@ -1791,6 +1794,8 @@
         <Item dbr="xpack4\item\charms\03_x4_sunworshipperichor.dbr" id="x4tagU_Charm_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\charms\03_x4_terracottaplating.dbr" id="x4tagU_Charm_03" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\charms\03_x4_yaoguaihorn.dbr" id="x4tagU_Charm_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\03_x4_essenceoforder_charm.dbr" id="x4tagU_Relic_07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\05_x4_goldenscarab_l_charm.dbr" id="x4tag_L_GoldenScarab" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
     </Legendary>
   </Charms>
@@ -2298,10 +2303,11 @@
         <Item dbr="xpack3\items\equipmentarmor\greaves\u_n_set08.dbr" id="x3tagUArmor218" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="x3tagSetName09">
+        <Item dbr="xpack3\items\equipmentarmor\torso\um_n_set09.dbr" id="x3tagUArmor519" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\armband\um_n_set09.dbr" id="x3tagUArmor119" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <!--<Item dbr="xpack3\items\equipmentarmor\greaves\um_n_set09.dbr" id="x3tagUArmor219" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
-        <Item dbr="xpack3\items\equipmentarmor\helm\um_n_set09.dbr" id="x3tagUArmor319" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
-        <Item dbr="xpack3\items\equipmentarmor\ring\um_n_set09.dbr" id="x3tagUArmor419" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>-->
+        <Item dbr="xpack3\items\equipmentarmor\helm\um_n_set09.dbr" id="x3tagUArmor319" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>-->
+        <Item dbr="xpack3\items\equipmentarmor\ring\um_n_set09.dbr" id="x3tagUArmor419" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="x3tagSetName10">
         <Item dbr="xpack3\items\equipmentarmor\armband\u_n_set10.dbr" id="x3tagUArmor120" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
@@ -2316,6 +2322,24 @@
       <Set name="x3tagSetName12">
         <Item dbr="xpack3\items\equipmentweapon\club\u_n_set12.dbr" id="x3tagU_Club08" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentweapon\shield\u_n_set12.dbr" id="x3tagU_Shield05" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+      </Set>
+      <Set name="x4tagU_Set_11">
+        <Item dbr="item\hcdungeon\us_e_chaoshero_amulet.dbr" id="x4tagU_Armor_103" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_chaoshero_arms.dbr" id="x4tagU_Armor_101" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_chaoshero_greaves.dbr" id="x4tagU_Armor_102" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_chaoshero_head.dbr" id="x4tagU_Armor_99" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_chaoshero_ring_01.dbr" id="x4tagU_Armor_104" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_chaoshero_ring_02.dbr" id="x4tagU_Armor_105" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_chaoshero_torso.dbr" id="x4tagU_Armor_100" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+      </Set>
+      <Set name="x4tagU_Set_12">
+        <Item dbr="item\hcdungeon\us_e_immortalhero_amulet.dbr" id="x4tagU_Armor_110" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_immortalhero_arms.dbr" id="x4tagU_Armor_108" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_immortalhero_greaves.dbr" id="x4tagU_Armor_109" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_immortalhero_head.dbr" id="x4tagU_Armor_106" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_immortalhero_ring_01.dbr" id="x4tagU_Armor_111" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_immortalhero_ring_02.dbr" id="x4tagU_Armor_112" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_e_immortalhero_torso.dbr" id="x4tagU_Armor_107" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
     </Epic>
     <Legendary>
@@ -2609,6 +2633,24 @@
         <Item dbr="xpack4\item\equipmentarmor\helm\us_l_xuanwushelmofinsight.dbr" id="x4tagU_Armor_81" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\us_l_xuanwusstaffofgreatermagic.dbr" id="x4tagU_Armor_82" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
+      <Set name="x4tagU_Set_11">
+        <Item dbr="item\hcdungeon\us_l_chaoshero_amulet.dbr" id="x4tagU_Armor_123" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_chaoshero_arms.dbr" id="x4tagU_Armor_121" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_chaoshero_greaves.dbr" id="x4tagU_Armor_122" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_chaoshero_head.dbr" id="x4tagU_Armor_119" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_chaoshero_ring_01.dbr" id="x4tagU_Armor_124" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_chaoshero_ring_02.dbr" id="x4tagU_Armor_125" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_chaoshero_torso.dbr" id="x4tagU_Armor_120" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+      </Set>
+      <Set name="x4tagU_Set_12">
+        <Item dbr="item\hcdungeon\us_l_immortalhero_amulet.dbr" id="x4tagU_Armor_130" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_immortalhero_arms.dbr" id="x4tagU_Armor_128" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_immortalhero_greaves.dbr" id="x4tagU_Armor_129" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_immortalhero_head.dbr" id="x4tagU_Armor_126" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_immortalhero_ring_01.dbr" id="x4tagU_Armor_131" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_immortalhero_ring_02.dbr" id="x4tagU_Armor_132" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\us_l_immortalhero_torso.dbr" id="x4tagU_Armor_127" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+      </Set>
     </Legendary>
   </Sets>
   <Uniques>
@@ -2644,9 +2686,9 @@
         <Item dbr="xpack2\item\equipmentarmor\amulet\u_n_004.dbr" id="x2tagUArmor120" isIT="true" isR="true" isAtl="false" isEE="false" find="@level04$: @act06$; @level05$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\amulet\u_e_002.dbr" id="x2tagUArmor114" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$; @level06$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\amulet\u_e_004.dbr" id="x2tagUArmor116" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$; @level06$: @act01$"/>
-        <!--<Item dbr="xpack3\items\equipmentarmor\amulet\u_n_01.dbr" id="x3tagUArmor008" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\equipmentarmor\amulet\u_n_01.dbr" id="x3tagUArmor008" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\amulet\u_n_02.dbr" id="x3tagUArmor009" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
-        <Item dbr="xpack3\items\equipmentarmor\amulet\u_n_03.dbr" id="x3tagUArmor010" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>-->        
+        <Item dbr="xpack3\items\equipmentarmor\amulet\u_n_03.dbr" id="x3tagUArmor010" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>        
       </Set>
       <Set name="uheader02">
         <Item dbr="item\equipmentarmor\um_n_archon'schiton.dbr" id="tagUArmor356" isIT="false" isR="false" isAtl="false" isEE="false" find="@level04$: @act01$"/>
@@ -2957,9 +2999,9 @@
         <Item dbr="xpack2\item\equipmentarmor\ring\u_n_003.dbr" id="x2tagUArmor109" isIT="true" isR="true" isAtl="false" isEE="false" find="@level04$: @act06$, @level05$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\ring\u_e_002.dbr" id="x2tagUArmor105" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$, @level06$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\ring\u_e_003.dbr" id="x2tagUArmor106" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$, @level06$: @act01$"/>
-        <!--<Item dbr="xpack3\items\equipmentarmor\ring\u_n_01.dbr" id="x3tagUArmor408" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\equipmentarmor\ring\u_n_01.dbr" id="x3tagUArmor408" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\ring\u_n_02.dbr" id="x3tagUArmor409" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
-        <Item dbr="xpack3\items\equipmentarmor\ring\u_n_03.dbr" id="x3tagUArmor410" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>-->
+        <Item dbr="xpack3\items\equipmentarmor\ring\u_n_03.dbr" id="x3tagUArmor410" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="uheader10">
         <Item dbr="item\equipmentshield\u_e_adamanteshield.dbr" id="tagUWeapon001" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @act01$, @level06$: @act01$"/>
@@ -3168,13 +3210,13 @@
         <Item dbr="xpack2\item\equipmentarmor\amulet\u_e_003.dbr" id="x2tagUArmor115" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act06$; @level06$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\amulet\u_l_001.dbr" id="x2tagUArmor111" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act06$"/>
         <Item dbr="xpack2\item\equipmentarmor\amulet\u_l_002.dbr" id="x2tagUArmor112" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act06$"/>
-        <!--<Item dbr="xpack3\items\equipmentarmor\amulet\u_e_01.dbr" id="x3tagUArmor001" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\equipmentarmor\amulet\u_e_01.dbr" id="x3tagUArmor001" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\amulet\u_e_02.dbr" id="x3tagUArmor002" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\amulet\u_e_03.dbr" id="x3tagUArmor003" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\amulet\u_l_01.dbr" id="x3tagUArmor004" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\amulet\u_l_02.dbr" id="x3tagUArmor005" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\amulet\u_l_03.dbr" id="x3tagUArmor006" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
-        <Item dbr="xpack3\items\equipmentarmor\amulet\u_l_04.dbr" id="x3tagUArmor007" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>-->
+        <Item dbr="xpack3\items\equipmentarmor\amulet\u_l_04.dbr" id="x3tagUArmor007" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\amulet\u_l_amuletofmaat.dbr" id="x4tagU_Amulet_08" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\amulet\u_l_baidiessence.dbr" id="x4tagU_Amulet_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\amulet\u_l_broachofhatshepsut.dbr" id="x4tagU_Amulet_01" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
@@ -3331,6 +3373,7 @@
         <Item dbr="xpack4\item\equipmentweapon\bow\u_l_wanmasbow.dbr" id="x4tagU_Bow03" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\bow\u_l_sekhmetsbow.dbr" id="x4tagU_Box07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\bow\u_l_starbow.dbr" id="x4tagU_Box06" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\u_l_bowofupis.dbr" id="x4tagU_Bow09" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
       <Set name="uheader05">
         <Item dbr="item\equipmentarmband\um_l_braceletofaman'da.dbr" id="tagUArmor051" isIT="false" isR="false" isAtl="false" isEE="false" find="@level06$: @amount07$"/>
@@ -3520,13 +3563,13 @@
         <Item dbr="xpack2\item\equipmentarmor\ring\u_l_001.dbr" id="x2tagUArmor101" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act06$"/>
         <Item dbr="xpack2\item\equipmentarmor\ring\u_l_002.dbr" id="x2tagUArmor102" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act06$"/>
         <Item dbr="xpack2\item\equipmentarmor\ring\u_l_003.dbr" id="x2tagUArmor103" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act06$"/>
-        <!--<Item dbr="xpack3\items\equipmentarmor\ring\u_e_01.dbr" id="x3tagUArmor401" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\equipmentarmor\ring\u_e_01.dbr" id="x3tagUArmor401" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\ring\u_e_02.dbr" id="x3tagUArmor402" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\ring\u_e_03.dbr" id="x3tagUArmor403" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\ring\u_l_01.dbr" id="x3tagUArmor404" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\ring\u_l_02.dbr" id="x3tagUArmor405" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\ring\u_l_03.dbr" id="x3tagUArmor406" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
-        <Item dbr="xpack3\items\equipmentarmor\ring\u_l_04.dbr" id="x3tagUArmor407" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>-->
+        <Item dbr="xpack3\items\equipmentarmor\ring\u_l_04.dbr" id="x3tagUArmor407" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\ring\u_l_archersprowess.dbr" id="x4tagU_Ring_08" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\ring\u_l_cobrasvenom.dbr" id="x4tagU_Ring_06" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\ring\u_l_jinshenspride.dbr" id="x4tagU_Ring_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
@@ -3576,6 +3619,7 @@
         <Item dbr="xpack4\item\equipmentweapon\shield\u_l_royaldecree.dbr" id="x4tagU_Shield02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\shield\u_l_gatesofhell.dbr" id="x4tagU_Shield05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\shield\u_l_kheprersresistance.dbr" id="x4tagU_Shield06" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\u_l_aresweakness.dbr" id="x4tagU_Shield07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
       <Set name="uheader11">
         <Item dbr="item\equipmentweapon\spear\u_e_amazonianspear.dbr" id="tagUWeapon196" isIT="false" isR="false" isAtl="false" isEE="false" find="@level05$: @amount07$, @level06$: @amount07$"/>
@@ -3644,6 +3688,7 @@
         <Item dbr="xpack4\item\equipmentweapon\staff\u_l_strengthofthenile.dbr" id="x4tagU_Staff01" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\u_l_yusacrifice.dbr" id="x4tagU_Staff05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\u_l_encompassingthought.dbr" id="x4tagU_Staff07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\u_l_medusasanguish.dbr" id="x4tagU_Staff09" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
       <Set name="uheader13">
         <Item dbr="item\equipmentweapon\sword\u_l_amenra'smagebane.dbr" id="tagUWeapon299" isIT="false" isR="false" isAtl="false" isEE="false" find="@level06$: @act02$, @act04$"/>
@@ -3681,6 +3726,7 @@
         <Item dbr="xpack4\item\equipmentweapon\sword\u_l_banefromthebeyond_01.dbr" id="x4tagU_Sword08" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\sword\u_l_hawklegionswarkhopesh.dbr" id="x4tagU_Sword10" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\sword\u_l_sunbeamsedge.dbr" id="x4tagU_Sword09" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\u_l_baguette.dbr" id="x4tagU_Sword11" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
       <Set name="uheader14">
         <Item dbr="xpack2\item\equipmentweapons\1hranged\u_e_01.dbr" id="x2tagUWeapon067" isIT="true" isR="true" isAtl="false" isEE="false" find="@level05$: @act01$, @act02$"/>
@@ -3700,6 +3746,7 @@
         <Item dbr="xpack3\items\equipmentweapon\1hranged\u_l_01.dbr" id="x3tagU_1hr04" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentweapon\1hranged\u_l_02.dbr" id="x3tagU_1hr05" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentweapon\1hranged\u_l_03.dbr" id="x3tagU_1hr06" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="item\hcdungeon\u_l_perseusdiscus.dbr" id="x4tagU_PerseusDiscus" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
     </Legendary>
   </Uniques>
