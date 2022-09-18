@@ -129,6 +129,7 @@
   <NameValuePair><Name>credits08</Name><Value>Übersetzung und kleinere Anpassungen + Hinzufügen der Ragnarök- und Atlantis-Items durch Malgardian</Value></NameValuePair>
   <NameValuePair><Name>credits09</Name><Value>TQC 1.1+ (Ragnarök + Atlantis + Eternal Embers) von Malgardian</Value></NameValuePair>
   <NameValuePair><Name>credits10</Name><Value>Aktualisierte französische Übersetzung von AlcyonV, Wagi and W.N.G.</Value></NameValuePair>
+  <NameValuePair><Name>credits11</Name><Value>JSON Parser für TQVault v4.0+ von hguy</Value></NameValuePair>
 
   <NameValuePair><Name>amount01</Name><Value>Keine Sammeln</Value></NameValuePair>
   <NameValuePair><Name>amount02</Name><Value>Alle Sammeln</Value></NameValuePair>

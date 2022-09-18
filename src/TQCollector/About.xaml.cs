@@ -34,6 +34,7 @@ namespace TQCollector
             Label_Spectre.Content = Files.Language["credits08"];
             Label_CreatedBy2.Content = Files.Language["credits09"];
             Label_Translators.Content = Files.Language["credits10"];
+            Label_hguy.Content = Files.Language["credits11"];
         }
     }
 }

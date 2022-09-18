@@ -1,17 +1,18 @@
 ﻿<Window x:Class="TQCollector.About"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="About" Height="330" Width="708" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="About" Height="360" Width="708" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
         <Label Content="credits:" Height="38" HorizontalAlignment="Left" Name="Label_Credits" VerticalAlignment="Top" Width="686" HorizontalContentAlignment="Left" FontSize="20" />
         <Label Height="28" HorizontalAlignment="Left" Margin="0,45,0,0" Name="Label_JJYing" VerticalAlignment="Top" Width="686" />
         <Label Height="28" HorizontalAlignment="Left" Margin="0,73,0,0" Name="Label_Sekkyumu" VerticalAlignment="Top" Width="686" />
         <Label Height="28" HorizontalAlignment="Left" Margin="0,101,0,0" Name="Label_Forums" VerticalAlignment="Top" Width="686" />
         <Label Height="28" HorizontalAlignment="Left" Margin="0,129,0,0" Name="Label_bman654" VerticalAlignment="Top" Width="686" />
-        <Label Height="28" HorizontalAlignment="Right" Margin="254,234,0,0" Name="Label_CreatedBy" VerticalAlignment="Top" Width="686" HorizontalContentAlignment="Right" />
+        <Label Height="28" HorizontalAlignment="Right" Margin="254,264,0,0" Name="Label_CreatedBy" VerticalAlignment="Top" Width="686" HorizontalContentAlignment="Right" />
         <Label Height="28" HorizontalAlignment="Left" Margin="0,157,0,0" Name="Label_Arperum" VerticalAlignment="Top" Width="686" />
         <Label Height="28" HorizontalAlignment="Left" Margin="0,185,0,0" x:Name="Label_Spectre" VerticalAlignment="Top" Width="686" />
-        <Label Height="28" HorizontalAlignment="Right" Margin="254,262,0,0" Name="Label_CreatedBy2" VerticalAlignment="Top" Width="686" HorizontalContentAlignment="Right" />
+        <Label Height="28" HorizontalAlignment="Right" Margin="254,292,0,0" Name="Label_CreatedBy2" VerticalAlignment="Top" Width="686" HorizontalContentAlignment="Right" />
         <Label Height="28" HorizontalAlignment="Left" Margin="0,213,0,0" Name="Label_Translators" VerticalAlignment="Top" Width="686" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="0,241,0,0" Name="Label_hguy" VerticalAlignment="Top" Width="686" />
     </Grid>
 </Window>

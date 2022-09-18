@@ -129,6 +129,7 @@
   <NameValuePair><Name>credits08</Name><Value>Malgardian pour l'aide sur la localisation des objets et l'ajout des objets de Ragnarök et Atlantis.</Value></NameValuePair>
   <NameValuePair><Name>credits09</Name><Value>TQC 1.1+ (Ragnarök + Atlantis + Eternal Embers) créé par Malgardian</Value></NameValuePair>
   <NameValuePair><Name>credits10</Name><Value>Traduction française mise à jour par AlcyonV, Wagi et W.N.G.</Value></NameValuePair>
+  <NameValuePair><Name>credits11</Name><Value>JSON Parser pour TQVault v4.0+ par hguy</Value></NameValuePair>
 
   <NameValuePair><Name>amount01</Name><Value>Ne pas recenser</Value></NameValuePair>
   <NameValuePair><Name>amount02</Name><Value>Recenser tout</Value></NameValuePair>
