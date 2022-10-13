@@ -25,7 +25,7 @@ namespace TQCollector
         {
             InitializeComponent();
 
-            Files.Configuration.Directories.Vaults = changeDirectory(ref isVaultsValid, "*.vault", ref Text_Vault, "", Files.Configuration.Directories.Vaults);
+            Files.Configuration.Directories.Vaults = changeDirectory(ref isVaultsValid, "*.vault*", ref Text_Vault, "", Files.Configuration.Directories.Vaults);
             Files.Configuration.Directories.TQ = changeDirectory(ref isTQValid, "text_*.arc", ref Text_TQ, "\\text", Files.Configuration.Directories.TQ);
             Files.Configuration.Directories.IT = changeDirectory(ref isITValid, "text_*.arc", ref Text_IT, "\\text", Files.Configuration.Directories.IT);
             Files.Configuration.Directories.AE = changeDirectory(ref isAEValid, "text_*.arc", ref Text_AE, "\\text", Files.Configuration.Directories.AE);
