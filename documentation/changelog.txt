@@ -108,3 +108,6 @@ v1.4.0.0 18/09/2022
 - fixed xml files not deploying at build time (thanks to hguy)
 - Repository & solution organization normalization (thanks to hguy)
 - updated item list & credits
+
+v1.4.0.1 31/10/2022
+- Fix for TQVault folders with only .json files
