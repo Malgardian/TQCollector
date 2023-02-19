@@ -40,6 +40,8 @@ namespace TQCollector {
         
         private Formulae formulaeField;
         
+        private Scrolls scrollsField;
+        
         /// <remarks/>
         public MonsterInfrequent MonsterInfrequent {
             get {
@@ -117,6 +119,16 @@ namespace TQCollector {
             }
             set {
                 this.formulaeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Scrolls Scrolls {
+            get {
+                return this.scrollsField;
+            }
+            set {
+                this.scrollsField = value;
             }
         }
     }
@@ -557,6 +569,55 @@ namespace TQCollector {
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://localhost/TQCItemDB")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://localhost/TQCItemDB", IsNullable=false)]
     public partial class Formulae {
+        
+        private Set[] normalField;
+        
+        private Set[] epicField;
+        
+        private Set[] legendaryField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("Set", IsNullable=false)]
+        public Set[] Normal {
+            get {
+                return this.normalField;
+            }
+            set {
+                this.normalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("Set", IsNullable=false)]
+        public Set[] Epic {
+            get {
+                return this.epicField;
+            }
+            set {
+                this.epicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("Set", IsNullable=false)]
+        public Set[] Legendary {
+            get {
+                return this.legendaryField;
+            }
+            set {
+                this.legendaryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://localhost/TQCItemDB")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://localhost/TQCItemDB", IsNullable=false)]
+    public partial class Scrolls {
         
         private Set[] normalField;
         

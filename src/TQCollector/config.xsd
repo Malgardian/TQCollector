@@ -45,6 +45,7 @@
         <xs:element ref="Uniques"/>
         <xs:element ref="Parchments"/>
         <xs:element ref="Formulae"/>
+        <xs:element ref="Scrolls"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -116,6 +117,16 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="Formulae">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amount"/>
+        <xs:element ref="Normal"/>
+        <xs:element ref="Epic"/>
+        <xs:element ref="Legendary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Scrolls">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="Amount"/>

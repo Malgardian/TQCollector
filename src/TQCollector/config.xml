@@ -67,5 +67,11 @@
       <Epic>false</Epic>
       <Legendary>false</Legendary>
     </Formulae>
+    <Scrolls>
+      <Amount>All</Amount>
+      <Normal>false</Normal>
+      <Epic>false</Epic>
+      <Legendary>false</Legendary>
+    </Scrolls>
   </Filters>
 </Config>

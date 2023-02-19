@@ -11,6 +11,7 @@
         <xs:element ref="tqcitemdb:Sets"/>
         <xs:element ref="tqcitemdb:Uniques"/>
         <xs:element ref="tqcitemdb:Formulae"/>
+        <xs:element ref="tqcitemdb:Scrolls"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -74,6 +75,15 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="Formulae">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tqcitemdb:Normal"/>
+        <xs:element ref="tqcitemdb:Epic"/>
+        <xs:element ref="tqcitemdb:Legendary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Scrolls">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="tqcitemdb:Normal"/>

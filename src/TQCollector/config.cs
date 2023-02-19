@@ -330,6 +330,8 @@ public partial class Filters {
     
     private Formulae formulaeField;
     
+    private Scrolls scrollsField;
+    
     /// <remarks/>
     public MonsterInfrequent MonsterInfrequent {
         get {
@@ -407,6 +409,16 @@ public partial class Filters {
         }
         set {
             this.formulaeField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public Scrolls Scrolls {
+        get {
+            return this.scrollsField;
+        }
+        set {
+            this.scrollsField = value;
         }
     }
 }
@@ -797,6 +809,64 @@ public partial class Parchments {
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://localhost/TQCConfig")]
 [System.Xml.Serialization.XmlRootAttribute(Namespace="http://localhost/TQCConfig", IsNullable=false)]
 public partial class Formulae {
+    
+    private Amount amountField;
+    
+    private bool normalField;
+    
+    private bool epicField;
+    
+    private bool legendaryField;
+    
+    /// <remarks/>
+    public Amount Amount {
+        get {
+            return this.amountField;
+        }
+        set {
+            this.amountField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public bool Normal {
+        get {
+            return this.normalField;
+        }
+        set {
+            this.normalField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public bool Epic {
+        get {
+            return this.epicField;
+        }
+        set {
+            this.epicField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public bool Legendary {
+        get {
+            return this.legendaryField;
+        }
+        set {
+            this.legendaryField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://localhost/TQCConfig")]
+[System.Xml.Serialization.XmlRootAttribute(Namespace="http://localhost/TQCConfig", IsNullable=false)]
+public partial class Scrolls {
     
     private Amount amountField;
     

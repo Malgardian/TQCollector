@@ -1402,6 +1402,9 @@ namespace TQCollector
             if (addItemSub(formulaeField.Normal, BaseID, location)) return;
             if (addItemSub(formulaeField.Epic, BaseID, location)) return;
             if (addItemSub(formulaeField.Legendary, BaseID, location)) return;
+            if (addItemSub(scrollsField.Normal, BaseID, location)) return;
+            if (addItemSub(scrollsField.Epic, BaseID, location)) return;
+            if (addItemSub(scrollsField.Legendary, BaseID, location)) return;
             if (addItemSub(setsField.Epic, BaseID, location)) return;
             if (addItemSub(setsField.Legendary, BaseID, location)) return;
             if (addItemSub(uniquesField.Epic, BaseID, location)) return;

@@ -3854,4 +3854,93 @@
       </Set>
     </Legendary>
   </Formulae>
+  <Scrolls>
+    <Normal>
+      <Set name="">
+        <Item dbr="xpack\item\scrolls\01_breakingwheel.dbr" id="xtagScroll001" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_crushingvortex.dbr" id="xtagScroll044" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_elementalshielding.dbr" id="xtagScroll047" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_frailty.dbr" id="xtagScroll009" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_frenzy.dbr" id="xtagScroll002" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_icenova.dbr" id="xtagScroll063" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_stormwitches.dbr" id="xtagScroll055" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_unbreakablealliance.dbr" id="xtagScroll060" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01_unbrokenfortitude.dbr" id="xtagScroll012" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01x_arcanepower.dbr" id="xtagScroll014" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01x_cyclops.dbr" id="xtagScroll050" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01x_skysrage.dbr" id="xtagScroll013" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01x_vulnerability.dbr" id="xtagScroll010" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\01x_warriorssong.dbr" id="xtagScroll005" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\01_bloodrage.dbr" id="x2tagScrollName05" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\01_persuasion.dbr" id="x2tagScrollName02" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\01_primalchaos.dbr" id="x2tagScrollName04" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\01_sunsblessing.dbr" id="x2tagScrollName03" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\01_svefnthorn.dbr" id="x2tagScrollName01" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\01_scroll01.dbr" id="x3tagScroll01" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\01_scroll02.dbr" id="x3tagScroll02" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\01_scroll03.dbr" id="x3tagScroll03" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\01_scroll04.dbr" id="x3tagScroll04" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+      </Set>
+    </Normal>
+    <Epic>
+      <Set name="">
+        <Item dbr="xpack\item\scrolls\02_breakingwheel.dbr" id="xtagScroll015" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_crushingvortex.dbr" id="xtagScroll045" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_elementalshielding.dbr" id="xtagScroll048" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_frailty.dbr" id="xtagScroll023" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_frenzy.dbr" id="xtagScroll016" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_icenova.dbr" id="xtagScroll064" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_stormwitches.dbr" id="xtagScroll056" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_unbreakablealliance.dbr" id="xtagScroll061" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02_unbrokenfortitude.dbr" id="xtagScroll058" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02x_djinni.dbr" id="xtagScroll052" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02x_earthquake.dbr" id="xtagScroll028" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02x_necromancer.dbr" id="xtagScroll025" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02x_vampirism.dbr" id="xtagScroll024" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\02x_vengeance.dbr" id="xtagScroll051" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\02_bloodrage.dbr" id="x2tagScrollName10" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\02_persuasion.dbr" id="x2tagScrollName07" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\02_primalchaos.dbr" id="x2tagScrollName09" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\02_sunsblessing.dbr" id="x2tagScrollName08" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\02_svefnthorn.dbr" id="x2tagScrollName11" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\02_scroll01.dbr" id="x3tagScroll01e" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\02_scroll02.dbr" id="x3tagScroll02e" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\02_scroll03.dbr" id="x3tagScroll03e" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\02_scroll04.dbr" id="x3tagScroll04e" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+      </Set>
+    </Epic>
+    <Legendary>
+      <Set name="">
+        <Item dbr="xpack\item\scrolls\03_breakingwheel.dbr" id="xtagScroll029" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_crushingvortex.dbr" id="xtagScroll046" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_elementalshielding.dbr" id="xtagScroll049" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_frailty.dbr" id="xtagScroll037" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_frenzy.dbr" id="xtagScroll030" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_icenova.dbr" id="xtagScroll065" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_stormwitches.dbr" id="xtagScroll057" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_unbreakablealliance.dbr" id="xtagScroll062" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03_unbrokenfortitude.dbr" id="xtagScroll059" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03x_archmagesfury.dbr" id="xtagScroll053" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03x_armageddon.dbr" id="xtagScroll039" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03x_arrowdancer.dbr" id="xtagScroll054" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03x_behemoth.dbr" id="xtagScroll040" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03x_maddenedgod.dbr" id="xtagScroll042" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack\item\scrolls\03x_magebane.dbr" id="xtagScroll043" isIT="true" isR="false" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\03_bloodrage.dbr" id="x2tagScrollName15" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\03_persuasion.dbr" id="x2tagScrollName12" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\03_primalchaos.dbr" id="x2tagScrollName14" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\03_sunsblessing.dbr" id="x2tagScrollName13" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\scrolls\03_svefnthorn.dbr" id="x2tagScrollName11" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\03_scroll01.dbr" id="x3tagScroll01l" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\03_scroll02.dbr" id="x3tagScroll02l" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\03_scroll03.dbr" id="x3tagScroll03l" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\scrolls\03_scroll04.dbr" id="x3tagScroll04l" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack4\item\scrolls\03_ancestralfavour.dbr" id="x4tagU_Scroll_03" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\scrolls\03_divinescrollofharmony.dbr" id="x4tagU_Scroll_01" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\scrolls\03_divinescrollofheavenlymandate.dbr" id="x4tagU_Scroll_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\scrolls\03_divinescrollofthetricksterfox.dbr" id="x4tagU_Scroll_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\scrolls\03_ragingseas.dbr" id="x4tagU_Scroll_04" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+      </Set>
+    </Legendary>
+  </Scrolls>
 </ItemDB>

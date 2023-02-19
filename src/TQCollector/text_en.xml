@@ -19,6 +19,7 @@
   <NameValuePair><Name>category07</Name><Value>Parchments</Value></NameValuePair>
   <NameValuePair><Name>category08</Name><Value>Formulae</Value></NameValuePair>
   <NameValuePair><Name>category09</Name><Value>Miscellaneous Options</Value></NameValuePair>
+  <NameValuePair><Name>category10</Name><Value>Scrolls</Value></NameValuePair>
 
   <NameValuePair><Name>miheader01</Name><Value>Arachnos</Value></NameValuePair>
   <NameValuePair><Name>miheader02</Name><Value>Bandari</Value></NameValuePair>
@@ -207,6 +208,6 @@
   <NameValuePair><Name>misc03</Name><Value>Display Owned Items</Value></NameValuePair>
   <NameValuePair><Name>misc04</Name><Value>Display Item Count Next To Name</Value></NameValuePair>
   
-  <NameValuePair><Name>width01</Name><Value>180</Value></NameValuePair>
-  <NameValuePair><Name>width02</Name><Value>200</Value></NameValuePair>
+  <NameValuePair><Name>width01</Name><Value>230</Value></NameValuePair>
+  <NameValuePair><Name>width02</Name><Value>220</Value></NameValuePair>
 </ArrayOfNameValuePair>
