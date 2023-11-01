@@ -1467,6 +1467,7 @@
         <Item dbr="xpack4\item\equipmentweapon\bow\mi_l_charioteers_bow_01.dbr" id="x4TagMI_Bow_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\armband\mi_l_nomadbandit_arms_01.dbr" id="x4TagMI_Armor_07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\club\mi_l_desertdwellers_club_01.dbr" id="x4TagMI_Club_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\equipmentweapon\axe\m_l_northerners_axe_01.dbr" id="x4TagM_Axe_01" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\helm\mi_l_nomadbandit_head_01.dbr" id="x4TagMI_Armor_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\shield\mi_l_threevenom_shield_01.dbr" id="x4TagMI_Shield_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\mi_l_fallenseers_coldstaff_01.dbr" id="x4TagMI_Staff_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
@@ -1668,6 +1669,7 @@
         <Item dbr="xpack4\item\relics\03_x4_incarnationofsobeksanctuary.dbr" id="x4tagU_Relic_01" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\relics\03_x4_incarnationofthetaotiesgluttony.dbr" id="x4tagU_Relic_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="item\hcdungeon\03_x4_essenceofchaos.dbr" id="x4tagU_Relic_06" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="item\hcdungeon\03_x4_essenceoforder_charm.dbr" id="x4tagU_Relic_07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
     </Legendary>
   </Relics>
@@ -1794,7 +1796,6 @@
         <Item dbr="xpack4\item\charms\03_x4_sunworshipperichor.dbr" id="x4tagU_Charm_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\charms\03_x4_terracottaplating.dbr" id="x4tagU_Charm_03" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\charms\03_x4_yaoguaihorn.dbr" id="x4tagU_Charm_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
-        <Item dbr="item\hcdungeon\03_x4_essenceoforder_charm.dbr" id="x4tagU_Relic_07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="item\hcdungeon\05_x4_goldenscarab_l_charm.dbr" id="x4tag_L_GoldenScarab" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
     </Legendary>
@@ -1922,6 +1923,7 @@
         <Item dbr="xpack\item\parchments\parchment15.dbr" id="xtagParchmentTitle15" isIT="true" isR="false" isAtl="false" isEE="false" find="Yeti champion, ice caverns and Silkroad, @act03$"/>
         <Item dbr="xpack\item\parchments\parchment06.dbr" id="xtagParchmentTitle06" isIT="true" isR="false" isAtl="false" isEE="false" find="Anouran heroes, @act04$"/>
         <Item dbr="xpack\item\parchments\parchment09.dbr" id="xtagParchmentTitle09" isIT="true" isR="false" isAtl="false" isEE="false" find="Lostsoul heroes (non-quest), @act04$"/>
+        <Item dbr="xpack2\scenery\primrose\primrose_parchment01.dbr" id="x2tagParchmentTitleZZ" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
         <Item dbr="xpack2\item\miscellaneous\parchments\parchment_x2a.dbr" id="x2tagParchmentTitle01" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
         <Item dbr="xpack2\item\miscellaneous\parchments\parchment_x2b.dbr" id="x2tagParchmentTitle02" isIT="true" isR="true" isAtl="false" isEE="false" find="Secret quest"/>
         <Item dbr="xpack2\item\miscellaneous\parchments\parchment_x2c.dbr" id="x2tagParchmentTitle03" isIT="true" isR="true" isAtl="false" isEE="false" find="Secret quest"/>
@@ -2272,6 +2274,12 @@
         <Item dbr="xpack2\item\equipmentarmor\armband\us_n_sucellus.dbr" id="x2tagUArmor019" isIT="true" isR="true" isAtl="false" isEE="false" find="@level04$: @act06$, @level05$: @act01$"/>
         <Item dbr="xpack2\item\equipmentarmor\greaves\us_n_sucellus.dbr" id="x2tagUArmor020" isIT="true" isR="true" isAtl="false" isEE="false" find="@level04$: @act06$, @level05$: @act01$"/>
       </Set>
+      <Set name="x2tagSet009">
+        <Item dbr="xpack2\item\equipmentarmor\helm\z_tracksuit.dbr" id="x2tagZArmor002" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\equipmentarmor\torso\z_tracksuit.dbr" id="x2tagZArmor001" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\equipmentarmor\armband\z_tracksuit.dbr" id="x2tagZArmor003" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <Item dbr="xpack2\item\equipmentarmor\greaves\z_tracksuit.dbr" id="x2tagZArmor004" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+      </Set>
       <Set name="x3tagSetName03">
         <Item dbr="xpack3\items\equipmentarmor\armband\u_e_set03.dbr" id="x3tagUArmor113" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentarmor\greaves\u_e_set03.dbr" id="x3tagUArmor213" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
@@ -2550,12 +2558,6 @@
       <Set name="x2tagSet010">
         <Item dbr="xpack2\item\equipmentweapons\1hranged\u_l_03.dbr" id="x2tagUWeapon059" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act02$, @act03$"/>
         <Item dbr="xpack2\item\equipmentweapons\1hranged\u_l_04.dbr" id="x2tagUWeapon060" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act02$, @act03$"/>
-      </Set>
-      <Set name="x2tagSet009">
-        <Item dbr="xpack2\item\equipmentarmor\helm\z_tracksuit.dbr" id="x2tagZArmor002" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack2\item\equipmentarmor\torso\z_tracksuit.dbr" id="x2tagZArmor001" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack2\item\equipmentarmor\armband\z_tracksuit.dbr" id="x2tagZArmor003" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack2\item\equipmentarmor\greaves\z_tracksuit.dbr" id="x2tagZArmor004" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
       </Set>
       <Set name="x3tagSetName01">
         <Item dbr="xpack3\items\equipmentarmor\armband\u_l_set01.dbr" id="x3tagUArmor111" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
