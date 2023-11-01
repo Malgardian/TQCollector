@@ -371,7 +371,7 @@
         <Item dbr="xpack3\items\equipmentweapon\staff\mi_n_coralguardian_lightning.dbr" id="x3tagMICoralGuardianStaff" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="miheader53">
-        <Item dbr="xpack3\items\equimentarmor\torso\mi_n_crabmanmelee.dbr" id="x3tagMICrabmanTorso" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\equipmentarmor\torso\mi_n_crabmanmelee.dbr" id="x3tagMICrabmanTorso" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="miheader54">
         <Item dbr="xpack3\items\equipmentarmor\armband\mi_n_embalmedpriestmage.dbr" id="x3tagMIEmbalmedPriestArmsCaster" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
@@ -848,7 +848,7 @@
         <Item dbr="xpack3\items\equipmentweapon\staff\mi_e_coralguardian_lightning.dbr" id="x3tagMICoralGuardianStaff" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="miheader53">
-        <Item dbr="xpack3\items\equimentarmor\torso\mi_e_crabmanmelee.dbr" id="x3tagMICrabmanTorso" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\equipmentarmor\torso\mi_e_crabmanmelee.dbr" id="x3tagMICrabmanTorso" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="miheader54">
         <Item dbr="xpack3\items\equipmentarmor\armband\mi_e_embalmedpriestmage.dbr" id="x3tagMIEmbalmedPriestArmsCaster" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
@@ -1325,7 +1325,7 @@
         <Item dbr="xpack3\items\equipmentweapon\staff\mi_l_coralguardian_lightning.dbr" id="x3tagMICoralGuardianStaff" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="miheader53">
-        <Item dbr="xpack3\items\equimentarmor\torso\mi_l_crabmanmelee.dbr" id="x3tagMICrabmanTorso" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
+        <Item dbr="xpack3\items\equipmentarmor\torso\mi_l_crabmanmelee.dbr" id="x3tagMICrabmanTorso" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
       </Set>
       <Set name="miheader54">
         <Item dbr="xpack3\items\equipmentarmor\armband\mi_l_embalmedpriestmage.dbr" id="x3tagMIEmbalmedPriestArmsCaster" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
