@@ -75,7 +75,7 @@
         <Item dbr="item\equipmentarmor\mi_n_jackalmanmage.dbr" id="tagMIArmor061" isIT="false" isR="false" isAtl="false" isEE="false" find="All Shamans, @act02$"/>
         <Item dbr="item\equipmentarmband\mi_n_jackalmanmelee.dbr" id="tagMIArmor009" isIT="false" isR="false" isAtl="false" isEE="false" find="All Berserkers; Hero: Slobberjaw, @act02$"/>
         <Item dbr="item\equipmentarmor\mi_n_jackalmanmelee.dbr" id="tagMIArmor062" isIT="false" isR="false" isAtl="false" isEE="false" find="All Berserkers; Hero: Slobberjaw, @act02$"/>
-        <Item dbr="xpack2\item\equipmentweapons\1hranged\mi_n_jackalman.dbr" id="x2tagMIWeapon026" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <!--<Item dbr="xpack2\item\equipmentweapons\1hranged\mi_n_jackalman.dbr" id="x2tagMIWeapon026" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>-->
       </Set>
       <Set name="miheader14">
         <Item dbr="item\equipmenthelm\mi_n_liche.dbr" id="tagMIArmor082" isIT="false" isR="false" isAtl="false" isEE="false" find="All Abyssal Liches, @act03$"/>
@@ -552,7 +552,7 @@
         <Item dbr="item\equipmentarmor\mi_e_jackalmanmage.dbr" id="tagMIArmor061" isIT="false" isR="false" isAtl="false" isEE="false" find="All Shamans, @act02$"/>
         <Item dbr="item\equipmentarmband\mi_e_jackalmanmelee.dbr" id="tagMIArmor009" isIT="false" isR="false" isAtl="false" isEE="false" find="All Berserkers; Hero: Slobberjaw, @act02$"/>
         <Item dbr="item\equipmentarmor\mi_e_jackalmanmelee.dbr" id="tagMIArmor062" isIT="false" isR="false" isAtl="false" isEE="false" find="All Berserkers; Hero: Slobberjaw, @act02$"/>
-        <Item dbr="xpack2\item\equipmentweapons\1hranged\mi_e_jackalman.dbr" id="x2tagMIWeapon026" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <!--<Item dbr="xpack2\item\equipmentweapons\1hranged\mi_e_jackalman.dbr" id="x2tagMIWeapon026" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>-->
       </Set>
       <Set name="miheader14">
         <Item dbr="item\equipmenthelm\mi_e_liche.dbr" id="tagMIArmor082" isIT="false" isR="false" isAtl="false" isEE="false" find="All Abyssal Liches, @act03$"/>
@@ -811,7 +811,7 @@
       <Set name="miheader49">
         <Item dbr="xpack2\item\equipmentarmor\helm\mi_e_troll.dbr" id="x2tagMIArmor002" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
         <Item dbr="xpack2\item\equipmentarmor\torso\mi_e_troll.dbr" id="x2tagMIArmor001" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
-        <Item dbr="xpack2\item\equipmentarmor\torso\mi_e_trollmage.dbr" id="x2tagMIArmor001b" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <!--<Item dbr="xpack2\item\equipmentarmor\torso\mi_e_trollmage.dbr" id="x2tagMIArmor001b" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>-->
         <Item dbr="xpack2\item\equipmentarmor\armband\mi_e_troll.dbr" id="x2tagMIArmor003" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
         <Item dbr="xpack2\item\equipmentarmor\greaves\mi_e_troll.dbr" id="x2tagMIArmor004" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
         <Item dbr="xpack2\item\equipmentweapons\axe\mi_e_troll.dbr" id="x2tagMIWeapon005" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
@@ -1029,7 +1029,7 @@
         <Item dbr="item\equipmentarmor\mi_l_jackalmanmage.dbr" id="tagMIArmor061" isIT="false" isR="false" isAtl="false" isEE="false" find="All Shamans, @act02$"/>
         <Item dbr="item\equipmentarmband\mi_l_jackalmanmelee.dbr" id="tagMIArmor009" isIT="false" isR="false" isAtl="false" isEE="false" find="All Berserkers; Hero: Slobberjaw, @act02$"/>
         <Item dbr="item\equipmentarmor\mi_l_jackalmanmelee.dbr" id="tagMIArmor062" isIT="false" isR="false" isAtl="false" isEE="false" find="All Berserkers; Hero: Slobberjaw, @act02$"/>
-        <Item dbr="xpack2\item\equipmentweapons\1hranged\mi_l_jackalman.dbr" id="x2tagMIWeapon026" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <!--<Item dbr="xpack2\item\equipmentweapons\1hranged\mi_l_jackalman.dbr" id="x2tagMIWeapon026" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>-->
       </Set>
       <Set name="miheader14">
         <Item dbr="item\equipmenthelm\mi_l_liche.dbr" id="tagMIArmor082" isIT="false" isR="false" isAtl="false" isEE="false" find="All Abyssal Liches, @act03$"/>
@@ -1460,9 +1460,9 @@
         <Item dbr="xpack4\item\equipmentweapon\axe\mi_l_ceremonial_axe_01.dbr" id="x4TagMI_Axe_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\spear\mi_l_ceremonial_spear_01.dbr" id="x4TagMI_Spear_04" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
       </Set>
-      <Set name="miheader65">
+      <!--<Set name="miheader65">
         <Item dbr="xpack4\item\equipmentarmor\torso\mi_l_mogwai_torso_01.dbr" id="x4TagMI_Armor_22" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
-      </Set>
+      </Set>-->
       <Set name="miheader66">
         <Item dbr="xpack4\item\equipmentweapon\bow\mi_l_charioteers_bow_01.dbr" id="x4TagMI_Bow_02" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentarmor\armband\mi_l_nomadbandit_arms_01.dbr" id="x4TagMI_Armor_07" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
@@ -1479,9 +1479,9 @@
         <Item dbr="xpack4\item\equipmentweapon\staff\mi_l_heretic_coldstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\mi_l_heretic_firestaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\mi_l_heretic_lightningstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
-        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_coldstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <!--Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_coldstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
         <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_firestaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
-        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_lightningstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>
+        <Item dbr="xpack4\item\equipmentweapon\staff\zazamankh_mi_l_heretic_lightningstaff_01.dbr" id="x4TagMI_Staff_05" isIT="true" isR="false" isAtl="false" isEE="true" find=""/>-->
       </Set>
     </Legendary>
   </MonsterInfrequent>
@@ -3742,7 +3742,7 @@
         <Item dbr="xpack2\item\equipmentweapons\1hranged\u_l_06.dbr" id="x2tagUWeapon062" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act03$, @act04$"/>
         <Item dbr="xpack2\item\equipmentweapons\1hranged\u_l_07.dbr" id="x2tagUWeapon063" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act04$, @act06$"/>
         <Item dbr="xpack2\item\equipmentweapons\1hranged\u_l_08.dbr" id="x2tagUWeapon064" isIT="true" isR="true" isAtl="false" isEE="false" find="@level06$: @act04$, @act06$"/>
-        <Item dbr="xpack2\item\equipmentweapons\1hranged\u_l_10.dbr" id="x2tagUWeapon066" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>
+        <!--<Item dbr="xpack2\item\equipmentweapons\1hranged\u_l_10.dbr" id="x2tagUWeapon066" isIT="true" isR="true" isAtl="false" isEE="false" find=""/>-->
         <Item dbr="xpack3\items\equipmentweapon\1hranged\u_e_01.dbr" id="x3tagU_1hr02" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentweapon\1hranged\u_e_02.dbr" id="x3tagU_1hr03" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
         <Item dbr="xpack3\items\equipmentweapon\1hranged\u_l_01.dbr" id="x3tagU_1hr04" isIT="true" isR="false" isAtl="true" isEE="false" find=""/>
