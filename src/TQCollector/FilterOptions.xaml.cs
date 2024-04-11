@@ -19,40 +19,41 @@ namespace TQCollector
             Do_Uniques_Load();
             Do_Parchments_Load();
             Do_Formulae_Load();
+            Do_Scrolls_Load();
             Do_Misc_Load();
             button2.Content = Files.Language["button01"];
             this.Title = Files.Language["window01"];
         }
 
-        private void MI_Change_Radios(Boolean b)
+        private void MI_Change_Radios(bool b)
         {
             MI_Check_Normal.IsEnabled = b;
             MI_Check_Epic.IsEnabled = b;
             MI_Check_Legendary.IsEnabled = b;
         }
 
-        private void Relics_Change_Radios(Boolean b)
+        private void Relics_Change_Radios(bool b)
         {
             Relics_Check_Ess.IsEnabled = b;
             Relics_Check_Embod.IsEnabled = b;
             Relics_Check_Inc.IsEnabled = b;
         }
 
-        private void Arti_Change_Radios(Boolean b)
+        private void Arti_Change_Radios(bool b)
         {
             Arti_Check_Lesser.IsEnabled = b;
             Arti_Check_Greater.IsEnabled = b;
             Arti_Check_Divine.IsEnabled = b;
         }
 
-        private void Charms_Change_Radios(Boolean b)
+        private void Charms_Change_Radios(bool b)
         {
             Charms_Check_Normal.IsEnabled = b;
             Charms_Check_Epic.IsEnabled = b;
             Charms_Check_Legendary.IsEnabled = b;
         }
 
-        private void Sets_Change_Radios(Boolean b)
+        private void Sets_Change_Radios(bool b)
         {
             Sets_Check_Epic.IsEnabled = b;
             Sets_Check_Legendary.IsEnabled = b;
@@ -63,6 +64,13 @@ namespace TQCollector
             Formulae_Check_Lesser.IsEnabled = b;
             Formulae_Check_Greater.IsEnabled = b;
             Formulae_Check_Divine.IsEnabled = b;
+        }
+
+        private void Scrolls_Change_Radios(bool b)
+        {
+            Scrolls_Check_Lesser.IsEnabled = b;
+            Scrolls_Check_Greater.IsEnabled = b;
+            Scrolls_Check_Divine.IsEnabled = b;
         }
 
         private void MI_Radio_None_Checked(object sender, RoutedEventArgs e)
@@ -455,6 +463,45 @@ namespace TQCollector
             }
         }
 
+        private void Do_Scrolls_Load()
+        {
+            Group_Scrolls.Header = Files.Language["category10"];
+
+            Scrolls_Radio_None.Content = Files.Language["amount01"];
+            Scrolls_Radio_All.Content = Files.Language["amount02"];
+            Scrolls_Radio_Some.Content = Files.Language["amount04"];
+
+            Scrolls_Check_Lesser.Content = Files.Language["level01"];
+            Scrolls_Check_Greater.Content = Files.Language["level02"];
+            Scrolls_Check_Divine.Content = Files.Language["level03"];
+
+            if (Files.Configuration.UseIT || Files.Configuration.UseAE)
+            {
+                if (Files.Configuration.Filters.Scrolls.Amount == Amount.None)
+                {
+                    Scrolls_Radio_None.IsChecked = true;
+                    Scrolls_Change_Radios(false);
+                }
+                else if (Files.Configuration.Filters.Scrolls.Amount == Amount.All)
+                {
+                    Scrolls_Radio_All.IsChecked = true;
+                    Scrolls_Change_Radios(false);
+                }
+                else
+                {
+                    Scrolls_Radio_Some.IsChecked = true;
+                    Scrolls_Change_Radios(true);
+                }
+            }
+            else
+            {
+                Scrolls_Change_Radios(false);
+                Scrolls_Radio_All.IsEnabled = false;
+                Scrolls_Radio_None.IsEnabled = false;
+                Scrolls_Radio_Some.IsEnabled = false;
+            }
+        }
+
         private void Do_Misc_Load()
         {
             Group_Misc.Header = Files.Language["category09"];
@@ -749,6 +796,54 @@ namespace TQCollector
         private void Misc_Check_ItemNameCount_Unchecked(object sender, RoutedEventArgs e)
         {
             Files.Configuration.UseItemNameCount = false;
+        }
+
+        private void Scrolls_Check_Lesser_Checked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Normal = true;
+        }
+
+        private void Scrolls_Check_Lesser_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Normal = false;
+        }
+
+        private void Scrolls_Check_Greater_Checked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Epic = true;
+        }
+
+        private void Scrolls_Check_Greater_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Epic = false;
+        }
+
+        private void Scrolls_Check_Divine_Checked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Legendary = true;
+        }
+
+        private void Scrolls_Check_Divine_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Legendary = false;
+        }
+
+        private void Scrolls_Radio_None_Checked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Amount = Amount.None;
+            Scrolls_Change_Radios(false);
+        }
+
+        private void Scrolls_Radio_All_Checked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Amount = Amount.All;
+            Scrolls_Change_Radios(false);
+        }
+
+        private void Scrolls_Radio_Some_Checked(object sender, RoutedEventArgs e)
+        {
+            Files.Configuration.Filters.Scrolls.Amount = Amount.Some;
+            Scrolls_Change_Radios(true);
         }
     }
 }

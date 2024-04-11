@@ -134,7 +134,7 @@
   <NameValuePair><Name>amount01</Name><Value>Keine Sammeln</Value></NameValuePair>
   <NameValuePair><Name>amount02</Name><Value>Alle Sammeln</Value></NameValuePair>
   <NameValuePair><Name>amount03</Name><Value>Jede Qualitätsstufe</Value></NameValuePair>
-  <NameValuePair><Name>amount04</Name><Value>Spezielle Qualitätsstufe:</Value></NameValuePair>
+  <NameValuePair><Name>amount04</Name><Value>Spezifische Qualitätsstufe:</Value></NameValuePair>
   <NameValuePair><Name>amount05</Name><Value>Alle Vervollständigungsboni</Value></NameValuePair>
   <NameValuePair><Name>amount06</Name><Value>Nicht als Set betrachten</Value></NameValuePair>
   <NameValuePair><Name>amount07</Name><Value>Alle Akte</Value></NameValuePair>
