@@ -207,6 +207,7 @@
   <NameValuePair><Name>misc02</Name><Value>Use Checkbox Instead Of Bold</Value></NameValuePair>
   <NameValuePair><Name>misc03</Name><Value>Display Owned Items</Value></NameValuePair>
   <NameValuePair><Name>misc04</Name><Value>Display Item Count Next To Name</Value></NameValuePair>
+  <NameValuePair><Name>misc05</Name><Value>Use TQVault vault files</Value></NameValuePair>
   
   <NameValuePair><Name>width01</Name><Value>230</Value></NameValuePair>
   <NameValuePair><Name>width02</Name><Value>220</Value></NameValuePair>

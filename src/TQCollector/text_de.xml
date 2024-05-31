@@ -206,6 +206,7 @@
   <NameValuePair><Name>misc02</Name><Value>Checkbox statt Fettschrift</Value></NameValuePair>
   <NameValuePair><Name>misc03</Name><Value>Zeige Items im Besitz</Value></NameValuePair>
   <NameValuePair><Name>misc04</Name><Value>Zeige Item Anzahl neben Item Namen</Value></NameValuePair>
+  <NameValuePair><Name>misc05</Name><Value>Vault Dateien von TQVault benutzen</Value></NameValuePair>
 
   <NameValuePair><Name>width01</Name><Value>285</Value></NameValuePair>
   <NameValuePair><Name>width02</Name><Value>215</Value></NameValuePair>

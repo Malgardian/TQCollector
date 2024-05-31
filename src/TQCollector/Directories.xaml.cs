@@ -37,6 +37,7 @@ namespace TQCollector
             Default_IT.Content = Files.Language["button03"];
             Default_TQ.Content = Files.Language["button03"];
             Default_AE.Content = Files.Language["button03"];
+            checkBox.Content = Files.Language["misc05"];
 
             label1.Content = Files.Language["path01"];
             label2.Content = Files.Language["path02"];
