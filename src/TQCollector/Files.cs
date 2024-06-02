@@ -1199,6 +1199,100 @@ namespace TQCollector
             }
         }
 
+        public static Set[] removeItems(Set[] sets, bool removeBG, bool removeSP, bool removeR, bool removeAtl, bool removeEE)
+        {
+            List<Set> ls = new List<Set>();
+
+            foreach (Set s in sets)
+            {
+                List<Item> filteredList = new List<Item>();
+                for (int i = 0; i < s.Item.Length; i++)
+                {
+                    if (removeBG == false && (s.Item[i].isR == false && s.Item[i].isAtl == false && s.Item[i].isEE == false))
+                    {
+                        filteredList.Add(s.Item[i]);
+                    }
+                    if (removeSP == false && s.Item[i].dbr.Contains("\\z_") == false)
+                    {
+                        filteredList.Add(s.Item[i]);
+                    }
+                    if (removeR == false && s.Item[i].isR)
+                    {
+                        filteredList.Add(s.Item[i]);
+                    }
+                    if (removeAtl == false && s.Item[i].isAtl)
+                    {
+                        filteredList.Add(s.Item[i]);
+                    }
+                    if (removeEE == false && s.Item[i].isEE)
+                    {
+                        filteredList.Add(s.Item[i]);
+                    }
+                }
+                Item[] filteredItem = new Item[filteredList.Count];
+                for (int i = 0; i < filteredList.Count; i++)
+                {
+                    filteredItem[i] = filteredList[i];
+                }
+                s.Item = filteredItem;
+                if (s.Item != null)
+                {
+                    ls.Add(s);
+                }
+            }
+
+            Set[] returnedList = new Set[ls.Count];
+            for (int i = 0; i < ls.Count; i++)
+            {
+                returnedList[i] = ls[i];
+            }
+            return returnedList;
+        }
+
+        public static Set[] removeBG(Set[] sets) //removes base game items from display
+        {
+            List<Set> ls = new List<Set>();
+
+            foreach (Set s in sets) //create a new set of items not from the base game
+            {
+                List<Item> nobg = new List<Item>();
+                for (int i = 0; i < s.Item.Length; i++) //create new item list w/o base game items
+                {
+                    if (s.Item[i].isR) // add R item to the new list
+                    {
+                        nobg.Add(s.Item[i]);
+                    }
+                    else if (s.Item[i].isAtl) // add Atl item to the new list
+                    {
+                        nobg.Add(s.Item[i]);
+                    }
+                    else if (s.Item[i].isEE) // add EE item to the new list
+                    {
+                        nobg.Add(s.Item[i]);
+                    }
+                }
+                Item[] nobg_item = new Item[nobg.Count];
+                for (int i = 0; i < nobg.Count; i++) //recreate new Item array from list w/o BG items
+                {
+                    nobg_item[i] = nobg[i];
+                }
+                s.Item = nobg_item;
+                if (s.Item != null) //only add set if it has non R items
+                {
+                    ls.Add(s);
+                }
+            }
+
+            Set[] ret = new Set[ls.Count];
+
+            for (int i = 0; i < ls.Count; i++)
+            {
+                ret[i] = ls[i];
+            }
+
+            return ret;
+        }
+
         public static Set[] removeSP(Set[] sets)
         {
             List<Set> ls = new List<Set>();
