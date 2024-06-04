@@ -1203,34 +1203,34 @@ namespace TQCollector
         {
             List<Set> ls = new List<Set>();
 
-            foreach (Set s in sets)
+            foreach (Set s in sets) //create a new set of items according to the input criteria
             {
                 List<Item> filteredList = new List<Item>();
                 for (int i = 0; i < s.Item.Length; i++)
                 {
                     if (removeBG == false && (s.Item[i].isR == false && s.Item[i].isAtl == false && s.Item[i].isEE == false))
                     {
-                        filteredList.Add(s.Item[i]);
+                        filteredList.Add(s.Item[i]); // item is from the base game? add it
                     }
                     if (removeSP == false && s.Item[i].dbr.Contains("\\z_") == false)
                     {
-                        filteredList.Add(s.Item[i]);
+                        filteredList.Add(s.Item[i]); // item is from the secret passage? add it
                     }
                     if (removeR == false && s.Item[i].isR)
                     {
-                        filteredList.Add(s.Item[i]);
+                        filteredList.Add(s.Item[i]); // item is from Ragnarök? add it
                     }
                     if (removeAtl == false && s.Item[i].isAtl)
                     {
-                        filteredList.Add(s.Item[i]);
+                        filteredList.Add(s.Item[i]); // item is from Atlantis? add it
                     }
                     if (removeEE == false && s.Item[i].isEE)
                     {
-                        filteredList.Add(s.Item[i]);
+                        filteredList.Add(s.Item[i]); // item is from Eternal Embers? add it
                     }
                 }
                 Item[] filteredItem = new Item[filteredList.Count];
-                for (int i = 0; i < filteredList.Count; i++)
+                for (int i = 0; i < filteredList.Count; i++) // recreate new Item array from list w/o filtered out items
                 {
                     filteredItem[i] = filteredList[i];
                 }
