@@ -119,6 +119,7 @@
   <NameValuePair><Name>tooltip13</Name><Value>Toggle Use Of Ragnarök</Value></NameValuePair>
   <NameValuePair><Name>tooltip14</Name><Value>Toggle Use Of Atlantis</Value></NameValuePair>
   <NameValuePair><Name>tooltip15</Name><Value>Toggle Use Of Eternal Embers</Value></NameValuePair>
+  <NameValuePair><Name>tooltip16</Name><Value>Toggle Use of base TQ</Value></NameValuePair>
 
   <NameValuePair><Name>credits01</Name><Value>Titan Quest Collector v{0} credits:</Value></NameValuePair>
   <NameValuePair><Name>credits02</Name><Value>JJ Ying for use of the Titan Quest Icon he created.</Value></NameValuePair>

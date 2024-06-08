@@ -66,6 +66,12 @@ namespace TQCollector
 
         private void LoadToggles()
         {
+            Button_ToggleBG.IsChecked = Files.Configuration.UseBG;
+            Button_ToggleBG.IsEnabled = Files.Configuration.UseBG;
+            Button_ToggleBG.ToolTip = Files.Language["tooltip16"];
+            Button_ToggleIT.IsChecked = Files.Configuration.UseIT;
+            Button_ToggleIT.IsEnabled = Files.Configuration.UseIT || Files.Configuration.UseAE;
+            Button_ToggleIT.ToolTip = Files.Language["tooltip04"];
             Button_ToggleSP.IsChecked = Files.Configuration.UseSP;
             Button_ToggleSP.IsEnabled = Files.Configuration.UseIT || Files.Configuration.UseAE;
             Button_ToggleSP.ToolTip = Files.Language["tooltip05"];
@@ -244,6 +250,46 @@ namespace TQCollector
         {
             Files.reloadFiles();
             refreshDisplay();
+        }
+
+        private void Button_ToggleBG_Checked(object sender, RoutedEventArgs e)
+        {
+            if (loaded)
+            {
+                Files.Configuration.UseBG = true;
+                Files.reloadFiles();
+                refreshDisplay();
+            }
+        }
+
+        private void Button_ToggleBG_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if (loaded)
+            {
+                Files.Configuration.UseBG = false;
+                Files.reloadFiles();
+                refreshDisplay();
+            }
+        }
+
+        private void Button_ToggleIT_Checked(object sender, RoutedEventArgs e)
+        {
+            if (loaded)
+            {
+                Files.Configuration.UseIT = true;
+                Files.reloadFiles();
+                refreshDisplay();
+            }
+        }
+
+        private void Button_ToggleIT_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if (loaded)
+            {
+                Files.Configuration.UseIT = false;
+                Files.reloadFiles();
+                refreshDisplay();
+            }
         }
 
         private void Button_ToggleSP_Checked(object sender, RoutedEventArgs e)

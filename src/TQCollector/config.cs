@@ -32,6 +32,8 @@ public partial class Config {
     
     private bool useVaultsField;
     
+    private bool useBGField;
+    
     private bool useITField;
     
     private bool useSPField;
@@ -102,6 +104,16 @@ public partial class Config {
         }
         set {
             this.useVaultsField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public bool UseBG {
+        get {
+            return this.useBGField;
+        }
+        set {
+            this.useBGField = value;
         }
     }
     

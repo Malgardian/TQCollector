@@ -9,6 +9,7 @@
   <UseInventories>true</UseInventories>
   <UseCaravan>false</UseCaravan>
   <UseVaults>false</UseVaults>
+  <UseBG>true</UseBG>
   <UseIT>false</UseIT>
   <UseSP>false</UseSP>
   <UseAE>false</UseAE>

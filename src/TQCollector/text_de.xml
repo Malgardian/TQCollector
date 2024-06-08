@@ -117,7 +117,8 @@
   <NameValuePair><Name>tooltip12</Name><Value>Nutzung der Anniversary Edition aktivieren</Value></NameValuePair>
   <NameValuePair><Name>tooltip13</Name><Value>Nutzung des Ragnarök Addons aktivieren</Value></NameValuePair>
   <NameValuePair><Name>tooltip14</Name><Value>Nutzung des Atlantis Addons aktivieren</Value></NameValuePair>
-  <NameValuePair><Name>tooltip14</Name><Value>Nutzung des Eternal Embers Addons aktivieren</Value></NameValuePair>
+  <NameValuePair><Name>tooltip15</Name><Value>Nutzung des Eternal Embers Addons aktivieren</Value></NameValuePair>
+  <NameValuePair><Name>tooltip16</Name><Value>Nutzung vom Titan Quest aktivieren</Value></NameValuePair>
 
   <NameValuePair><Name>credits01</Name><Value>Titan Quest Collector v{0} Credits:</Value></NameValuePair>
   <NameValuePair><Name>credits02</Name><Value>JJ Ying für die Titan Quest Icons, die er erstellt hat.</Value></NameValuePair>

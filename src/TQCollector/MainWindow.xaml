@@ -26,6 +26,12 @@
                 <ToggleButton Name="Button_ToggleCaravan" Checked="Button_ToggleCaravan_Checked" Unchecked="Button_ToggleCaravan_Unchecked">
                     <Image Source="/images/toggle_caravan.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </ToggleButton>
+                <ToggleButton Name="Button_ToggleBG" Checked="Button_ToggleBG_Checked" Unchecked="Button_ToggleBG_Unchecked">
+                    <Image Source="/images/anniversary_edition.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </ToggleButton>
+                <ToggleButton Name="Button_ToggleIT" Checked="Button_ToggleIT_Checked" Unchecked="Button_ToggleIT_Unchecked">
+                    <Image Source="/images/toggle_it.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </ToggleButton>
                 <ToggleButton Name="Button_ToggleSP" Checked="Button_ToggleSP_Checked" Unchecked="Button_ToggleSP_Unchecked">
                     <Image Source="/images/secret_passage.png" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </ToggleButton>

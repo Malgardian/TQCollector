@@ -118,6 +118,7 @@
   <NameValuePair><Name>tooltip13</Name><Value>Prendre en compte Ragnarök</Value></NameValuePair>
   <NameValuePair><Name>tooltip14</Name><Value>Prendre en compte Atlantis</Value></NameValuePair>
   <NameValuePair><Name>tooltip15</Name><Value>Prendre en compte Eternal Embers</Value></NameValuePair>
+  <NameValuePair><Name>tooltip16</Name><Value>Prendre en compte TQ</Value></NameValuePair>
 
   <NameValuePair><Name>credits01</Name><Value>Crédits pour Titan Quest Collector v{0} :</Value></NameValuePair>
   <NameValuePair><Name>credits02</Name><Value>JJ Ying pour l'utilisation de l'icône Titan Quest qu'il a créée.</Value></NameValuePair>
