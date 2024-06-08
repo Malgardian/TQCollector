@@ -400,248 +400,68 @@ namespace TQCollector
             TabItem tb = new TabItem();
             int sub = 0;
             int tot = 0;
+            Set[] minormal;
+            Set[] miepic;
+            Set[] milegendary;
 
             if (Files.Configuration.Filters.MonsterInfrequent.Amount == Amount.Some)
             {
                 TabControl MonsterInfrequentTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl && !Files.Configuration.UseEE) // No expansions
-                {
-                    Set[] minormal = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal)));
-                    Set[] miepic = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic)));
-                    Set[] milegendary = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary)));
 
-                    if (Files.Configuration.Filters.MonsterInfrequent.Normal)
-                    {
-                        sub += Files.Count(minormal);
-                        tot += Files.Total(minormal);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], minormal));
-                    }
-                    if (Files.Configuration.Filters.MonsterInfrequent.Epic)
-                    {
-                        sub += Files.Count(miepic);
-                        tot += Files.Total(miepic);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], miepic));
-                    }
-                    if (Files.Configuration.Filters.MonsterInfrequent.Legendary)
-                    {
-                        sub += Files.Count(milegendary);
-                        tot += Files.Total(milegendary);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], milegendary));
-                    }
-                }
-                else if (!Files.Configuration.UseR || !Files.Configuration.UseAtl || !Files.Configuration.UseEE) //At least one expansion
-                {
-                    Set[] minormal;
-                    Set[] miepic;
-                    Set[] milegendary;
-                    if (!Files.Configuration.UseR && Files.Configuration.UseAtl && Files.Configuration.UseEE) //Atl + EE, no R
-                    {
-                        minormal = Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        miepic = Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        milegendary = Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    }
-                    else if (!Files.Configuration.UseAtl && Files.Configuration.UseR && Files.Configuration.UseEE) //R + EE, no Atl
-                    {
-                        minormal = Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        miepic = Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        milegendary = Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    }
-                    else if (!Files.Configuration.UseEE && Files.Configuration.UseR && Files.Configuration.UseAtl) //R + Atl, no EE
-                    {
-                        minormal = Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        miepic = Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        milegendary = Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    }
-                    else if (!Files.Configuration.UseR && !Files.Configuration.UseEE && Files.Configuration.UseAtl) //Atl, no R + EE
-                    {
-                        minormal = Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal));
-                        miepic = Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic));
-                        milegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                    }
-                    else if (!Files.Configuration.UseR && !Files.Configuration.UseAtl && Files.Configuration.UseEE) //EE, no R + Atl
-                    {
-                        minormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal));
-                        miepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic));
-                        milegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                    }
-                    else
-                    {
-                        minormal = Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Normal)); //R, no Atl + EE
-                        miepic = Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Epic));
-                        milegendary = Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                    }
-                    if (Files.Configuration.Filters.MonsterInfrequent.Normal)
-                    {
-                        sub += Files.Count(minormal);
-                        tot += Files.Total(minormal);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], minormal));
-                    }
-                    if (Files.Configuration.Filters.MonsterInfrequent.Epic)
-                    {
-                        sub += Files.Count(miepic);
-                        tot += Files.Total(miepic);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], miepic));
-                    }
-                    if (Files.Configuration.Filters.MonsterInfrequent.Legendary)
-                    {
-                        sub += Files.Count(milegendary);
-                        tot += Files.Total(milegendary);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], milegendary));
-                    }
-                }
-                else //All expansions
-                {
-                    if (Files.Configuration.Filters.MonsterInfrequent.Normal)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        tot += Files.Total(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], Files.ItemDatabase.MonsterInfrequent.Normal));
-                    }
-                    if (Files.Configuration.Filters.MonsterInfrequent.Epic)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        tot += Files.Total(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], Files.ItemDatabase.MonsterInfrequent.Epic));
-                    }
-                    if (Files.Configuration.Filters.MonsterInfrequent.Legendary)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                        tot += Files.Total(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                        MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], Files.ItemDatabase.MonsterInfrequent.Legendary));
-                    }
-                }
+                minormal = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                miepic = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                milegendary = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
 
+                if (Files.Configuration.Filters.MonsterInfrequent.Normal)
+                {
+                    sub += Files.Count(minormal);
+                    tot += Files.Total(minormal);
+                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], minormal));
+                }
+                if (Files.Configuration.Filters.MonsterInfrequent.Epic)
+                {
+                    sub += Files.Count(miepic);
+                    tot += Files.Total(miepic);
+                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], miepic));
+                }
+                if (Files.Configuration.Filters.MonsterInfrequent.Legendary)
+                {
+                    sub += Files.Count(milegendary);
+                    tot += Files.Total(milegendary);
+                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], milegendary));
+                }
+ 
                 tb.Header = generateText(Files.Language["category01"], sub, tot);
                 tb.Content = MonsterInfrequentTabControl;
             }
             else if (Files.Configuration.Filters.MonsterInfrequent.Amount == Amount.All)
             {
                 TabControl MonsterInfrequentTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl && !Files.Configuration.UseEE) // No expansions
-                {
-                    Set[] minormal = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal)));
-                    Set[] miepic = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic)));
-                    Set[] milegendary = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary)));
-                    sub = Files.Count(minormal) + Files.Count(miepic) + Files.Count(milegendary);
-                    tot = Files.Total(minormal) + Files.Total(miepic) + Files.Total(milegendary);
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], minormal));
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], miepic));
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], milegendary));
-                }
-                else if (!Files.Configuration.UseR || !Files.Configuration.UseAtl || !Files.Configuration.UseEE) // At least one expansion
-                {
-                    Set[] minormal;
-                    Set[] miepic;
-                    Set[] milegendary;
-                    if (!Files.Configuration.UseR && Files.Configuration.UseAtl && Files.Configuration.UseEE) // Atl + EE, no R
-                    {
-                        minormal = Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        miepic = Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        milegendary = Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    }
-                    else if (!Files.Configuration.UseAtl && Files.Configuration.UseR && Files.Configuration.UseEE) // R + EE, no Atl
-                    {
-                        minormal = Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        miepic = Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        milegendary = Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    }
-                    else if (!Files.Configuration.UseEE && Files.Configuration.UseR && Files.Configuration.UseAtl) // R + Atl, no EE
-                    {
-                        minormal = Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Normal);
-                        miepic = Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Epic);
-                        milegendary = Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    }
-                    else if (!Files.Configuration.UseAtl && !Files.Configuration.UseEE && Files.Configuration.UseR) // R, no Atl + EE
-                    {
-                        minormal = Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Normal));
-                        miepic = Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Epic));
-                        milegendary = Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                    }
-                    else if (!Files.Configuration.UseR && !Files.Configuration.UseEE && Files.Configuration.UseAtl) // Atl, no R + EE
-                    {
-                        minormal = Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal));
-                        miepic = Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic));
-                        milegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                    }
-                    else
-                    {
-                        minormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal)); // EE, no R + Atl
-                        miepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic));
-                        milegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                    }
-                    sub = Files.Count(minormal) + Files.Count(miepic) + Files.Count(milegendary);
-                    tot = Files.Total(minormal) + Files.Total(miepic) + Files.Total(milegendary);
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], minormal));
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], miepic));
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], milegendary));
-                }
-                else // All expansions
-                {
-                    sub = Files.Count(Files.ItemDatabase.MonsterInfrequent.Normal) + Files.Count(Files.ItemDatabase.MonsterInfrequent.Epic) + Files.Count(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    tot = Files.Total(Files.ItemDatabase.MonsterInfrequent.Normal) + Files.Total(Files.ItemDatabase.MonsterInfrequent.Epic) + Files.Total(Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], Files.ItemDatabase.MonsterInfrequent.Normal));
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], Files.ItemDatabase.MonsterInfrequent.Epic));
-                    MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], Files.ItemDatabase.MonsterInfrequent.Legendary));
-                }
+
+                minormal = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                miepic = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                milegendary = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                
+                sub = Files.Count(minormal) + Files.Count(miepic) + Files.Count(milegendary);
+                tot = Files.Total(minormal) + Files.Total(miepic) + Files.Total(milegendary);
+                MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level04"], minormal));
+                MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level05"], miepic));
+                MonsterInfrequentTabControl.Items.Add(CreateListTab(Files.Language["level06"], milegendary));
+                
                 tb.Header = generateText(Files.Language["category01"], sub, tot);
                 tb.Content = MonsterInfrequentTabControl;
             }
-            else if (Files.Configuration.Filters.MonsterInfrequent.Amount == Amount.Any)
+            else if (Files.Configuration.Filters.MonsterInfrequent.Amount == Amount.Any) // no MonsterInfrequentTabControl? Intentional? Investigate at some point.
             {
-                //Don't care what difficulty, as long as they have it.
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl && !Files.Configuration.UseEE) // No expansions
-                {
-                    Set[] combined = Files.Combine(Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal))), Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary))));
-                    combined = Files.Combine(combined, Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic))));
-                    sub = Files.Count(combined);
-                    tot = Files.Total(combined);
-                    tb = CreateListTab(Files.Language["category01"], combined);
-                }
-                else if (!Files.Configuration.UseR || !Files.Configuration.UseAtl || !Files.Configuration.UseEE) // At least one expansion
-                {
-                    Set[] combined;
-                    if (!Files.Configuration.UseR && Files.Configuration.UseAtl && Files.Configuration.UseEE) // Atl + EE, no R
-                    {
-                        combined = Files.Combine(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal), Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                        combined = Files.Combine(combined, Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic));
-                    }
-                    else if (!Files.Configuration.UseAtl && Files.Configuration.UseR && Files.Configuration.UseEE) // R + EE, no Atl
-                    {
-                        combined = Files.Combine(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Normal), Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                        combined = Files.Combine(combined, Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Epic));
-                    }
-                    else if (!Files.Configuration.UseEE && Files.Configuration.UseR && Files.Configuration.UseAtl) // R + Atl, no EE
-                    {
-                        combined = Files.Combine(Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Normal), Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Legendary));
-                        combined = Files.Combine(combined, Files.removeEE(Files.ItemDatabase.MonsterInfrequent.Epic));
-                    }
-                    else if (!Files.Configuration.UseAtl && !Files.Configuration.UseEE && Files.Configuration.UseR) // R, no Atl + EE
-                    {
-                        combined = Files.Combine(Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Normal)), Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Legendary)));
-                        combined = Files.Combine(combined, Files.removeEE(Files.removeAtl(Files.ItemDatabase.MonsterInfrequent.Epic)));
-                    }
-                    else if (!Files.Configuration.UseR && !Files.Configuration.UseEE && Files.Configuration.UseAtl) // Atl, no R + EE
-                    {
-                        combined = Files.Combine(Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal)), Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary)));
-                        combined = Files.Combine(combined, Files.removeEE(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic)));
-                    }
-                    else // EE, no R + Atl
-                    {
-                        combined = Files.Combine(Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Normal)), Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Legendary)));
-                        combined = Files.Combine(combined, Files.removeAtl(Files.removeR(Files.ItemDatabase.MonsterInfrequent.Epic)));
-                    }
-                    sub = Files.Count(combined);
-                    tot = Files.Total(combined);
-                    tb = CreateListTab(Files.Language["category01"], combined);
-                }
-                else // All expansions
-                {
-                    Set[] combined = Files.Combine(Files.ItemDatabase.MonsterInfrequent.Normal, Files.ItemDatabase.MonsterInfrequent.Legendary);
-                    combined = Files.Combine(combined, Files.ItemDatabase.MonsterInfrequent.Epic);
-                    sub = Files.Count(combined);
-                    tot = Files.Total(combined);
-                    tb = CreateListTab(Files.Language["category01"], combined);
-                }
+                minormal = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Normal, !Files.Configuration.UseBG, !Files.Configuration.UseIT, !Files.Configuration.UseSP, !Files.Configuration.UseR, !Files.Configuration.UseAtl, !Files.Configuration.UseEE);
+                miepic = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Epic, !Files.Configuration.UseBG, !Files.Configuration.UseIT, !Files.Configuration.UseSP, !Files.Configuration.UseR, !Files.Configuration.UseAtl, !Files.Configuration.UseEE);
+                milegendary = Files.filterItems(Files.ItemDatabase.MonsterInfrequent.Legendary, !Files.Configuration.UseBG, !Files.Configuration.UseIT, !Files.Configuration.UseSP, !Files.Configuration.UseR, !Files.Configuration.UseAtl, !Files.Configuration.UseEE);
+
+                Set[] combined = Files.Combine(minormal, milegendary);
+                combined = Files.Combine(combined, miepic);
+                sub = Files.Count(combined);
+                tot = Files.Total(combined);
+                tb = CreateListTab(Files.Language["category01"], combined);
             }
 
             ItemsCount += sub;

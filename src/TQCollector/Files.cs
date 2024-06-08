@@ -1199,7 +1199,7 @@ namespace TQCollector
             }
         }
 
-        public static Set[] removeItems(Set[] sets, bool removeBG, bool removeSP, bool removeR, bool removeAtl, bool removeEE)
+        public static Set[] filterItems(Set[] sets, bool listBG, bool listIT, bool listSP, bool listR, bool listAtl, bool listEE)
         {
             List<Set> ls = new List<Set>();
 
@@ -1208,23 +1208,27 @@ namespace TQCollector
                 List<Item> filteredList = new List<Item>();
                 for (int i = 0; i < s.Item.Length; i++)
                 {
-                    if (removeBG == false && (s.Item[i].isR == false && s.Item[i].isAtl == false && s.Item[i].isEE == false))
+                    if (listBG && s.Item[i].isIT == false && s.Item[i].isR == false && s.Item[i].isAtl == false && s.Item[i].isEE == false)
                     {
                         filteredList.Add(s.Item[i]); // item is from the base game? add it
                     }
-                    if (removeSP == false && s.Item[i].dbr.Contains("\\z_") == false)
+                    if (listIT && s.Item[i].isIT)
+                    {
+                        filteredList.Add(s.Item[i]); // item is from IT? add it
+                    }
+                    if (listSP && s.Item[i].dbr.Contains("\\z_"))
                     {
                         filteredList.Add(s.Item[i]); // item is from the secret passage? add it
                     }
-                    if (removeR == false && s.Item[i].isR)
+                    if (listR && s.Item[i].isR)
                     {
                         filteredList.Add(s.Item[i]); // item is from Ragnarök? add it
                     }
-                    if (removeAtl == false && s.Item[i].isAtl)
+                    if (listAtl && s.Item[i].isAtl)
                     {
                         filteredList.Add(s.Item[i]); // item is from Atlantis? add it
                     }
-                    if (removeEE == false && s.Item[i].isEE)
+                    if (listEE && s.Item[i].isEE)
                     {
                         filteredList.Add(s.Item[i]); // item is from Eternal Embers? add it
                     }
