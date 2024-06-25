@@ -537,114 +537,45 @@ namespace TQCollector
             if (Files.Configuration.Filters.Artifacts.Amount == Amount.Some)
             {
                 TabControl ArtifactTabControl = new TabControl();
-                if (!Files.Configuration.UseR)
+
+                if (Files.Configuration.Filters.Artifacts.Normal)
                 {
-                    Set[] artnormal = Files.removeR(Files.ItemDatabase.Artifacts.Normal);
-                    Set[] artepic = Files.removeR(Files.ItemDatabase.Artifacts.Epic);
-                    Set[] artlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        artlegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Artifacts.Legendary));
-                    }
-                    else
-                    {
-                        artlegendary = Files.removeR(Files.ItemDatabase.Artifacts.Legendary);
-                    }
-                    if (Files.Configuration.Filters.Artifacts.Normal)
-                    {
-                        sub += Files.Count(artnormal);
-                        tot += Files.Total(artnormal);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], artnormal));
-                    }
-                    if (Files.Configuration.Filters.Artifacts.Epic)
-                    {
-                        sub += Files.Count(artepic);
-                        tot += Files.Total(artepic);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], artepic));
-                    }
-                    if (Files.Configuration.Filters.Artifacts.Legendary)
-                    {
-                        sub += Files.Count(artlegendary);
-                        tot += Files.Total(artlegendary);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], artlegendary));
-                    }
+                    Set[] artnormal = Files.filterItems(Files.ItemDatabase.Artifacts.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(artnormal);
+                    tot += Files.Total(artnormal);
+                    ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], artnormal));
                 }
-                else
+                if (Files.Configuration.Filters.Artifacts.Epic)
                 {
-                    Set[] artlegendary = Files.ItemDatabase.Artifacts.Legendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        artlegendary = Files.removeEE(Files.ItemDatabase.Artifacts.Legendary);
-                    }
-                    if (Files.Configuration.Filters.Artifacts.Normal)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Artifacts.Normal);
-                        tot += Files.Total(Files.ItemDatabase.Artifacts.Normal);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], Files.ItemDatabase.Artifacts.Normal));
-                    }
-                    if (Files.Configuration.Filters.Artifacts.Epic)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Artifacts.Epic);
-                        tot += Files.Total(Files.ItemDatabase.Artifacts.Epic);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], Files.ItemDatabase.Artifacts.Epic));
-                    }
-                    if (Files.Configuration.Filters.Artifacts.Legendary)
-                    {
-                        sub += Files.Count(artlegendary);
-                        tot += Files.Total(artlegendary);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], artlegendary));
-                    }
+                    Set[] artepic = Files.filterItems(Files.ItemDatabase.Artifacts.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(artepic);
+                    tot += Files.Total(artepic);
+                    ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], artepic));
                 }
+                if (Files.Configuration.Filters.Artifacts.Legendary)
+                {
+                    Set[] artlegendary = Files.filterItems(Files.ItemDatabase.Artifacts.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(artlegendary);
+                    tot += Files.Total(artlegendary);
+                    ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], artlegendary));
+                }
+
                 tb.Header = generateText(Files.Language["category04"], sub, tot);
                 tb.Content = ArtifactTabControl;
             }
             else if (Files.Configuration.Filters.Artifacts.Amount == Amount.All)
             {
                 TabControl ArtifactTabControl = new TabControl();
-                if (!Files.Configuration.UseR)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] artnormal = Files.removeR(Files.ItemDatabase.Artifacts.Normal);
-                        Set[] artepic = Files.removeR(Files.ItemDatabase.Artifacts.Epic);
-                        Set[] artlegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Artifacts.Legendary));
-                        sub = Files.Count(artnormal) + Files.Count(artepic) + Files.Count(artlegendary);
-                        tot = Files.Total(artnormal) + Files.Total(artepic) + Files.Total(artlegendary);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], artnormal));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], artepic));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], artlegendary));
-                    }
-                    else
-                    {
-                        Set[] artnormal = Files.removeR(Files.ItemDatabase.Artifacts.Normal);
-                        Set[] artepic = Files.removeR(Files.ItemDatabase.Artifacts.Epic);
-                        Set[] artlegendary = Files.removeR(Files.ItemDatabase.Artifacts.Legendary);
-                        sub = Files.Count(artnormal) + Files.Count(artepic) + Files.Count(artlegendary);
-                        tot = Files.Total(artnormal) + Files.Total(artepic) + Files.Total(artlegendary);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], artnormal));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], artepic));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], artlegendary));
-                    }
-                }
-                else
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        sub = Files.Count(Files.ItemDatabase.Artifacts.Normal) + Files.Count(Files.ItemDatabase.Artifacts.Epic) + Files.Count(Files.removeEE(Files.ItemDatabase.Artifacts.Legendary));
-                        tot = Files.Total(Files.ItemDatabase.Artifacts.Normal) + Files.Total(Files.ItemDatabase.Artifacts.Epic) + Files.Total(Files.removeEE(Files.ItemDatabase.Artifacts.Legendary));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], Files.ItemDatabase.Artifacts.Normal));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], Files.ItemDatabase.Artifacts.Epic));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], Files.removeEE(Files.ItemDatabase.Artifacts.Legendary)));
-                    }
-                    else
-                    {
-                        sub = Files.Count(Files.ItemDatabase.Artifacts.Normal) + Files.Count(Files.ItemDatabase.Artifacts.Epic) + Files.Count(Files.ItemDatabase.Artifacts.Legendary);
-                        tot = Files.Total(Files.ItemDatabase.Artifacts.Normal) + Files.Total(Files.ItemDatabase.Artifacts.Epic) + Files.Total(Files.ItemDatabase.Artifacts.Legendary);
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], Files.ItemDatabase.Artifacts.Normal));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], Files.ItemDatabase.Artifacts.Epic));
-                        ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], Files.ItemDatabase.Artifacts.Legendary));
-                    }
-                }
+
+                Set[] artnormal = Files.filterItems(Files.ItemDatabase.Artifacts.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] artepic = Files.filterItems(Files.ItemDatabase.Artifacts.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] artlegendary = Files.filterItems(Files.ItemDatabase.Artifacts.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                sub = Files.Count(artnormal) + Files.Count(artepic) + Files.Count(artlegendary);
+                tot = Files.Total(artnormal) + Files.Total(artepic) + Files.Total(artlegendary);
+                ArtifactTabControl.Items.Add(CreateTab(Files.Language["level01"], artnormal));
+                ArtifactTabControl.Items.Add(CreateTab(Files.Language["level02"], artepic));
+                ArtifactTabControl.Items.Add(CreateTab(Files.Language["level03"], artlegendary));
+
                 tb.Header = generateText(Files.Language["category04"], sub, tot);
                 tb.Content = ArtifactTabControl;
             }
