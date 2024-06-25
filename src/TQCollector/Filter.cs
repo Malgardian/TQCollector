@@ -647,19 +647,7 @@ namespace TQCollector
 
         private static TabItem DisplayParchments()
         {
-            Set[] parch = Files.ItemDatabase.Parchments.Normal;
-            if (!Files.Configuration.UseR)
-            {
-                parch = Files.removeR(parch);
-            }
-            if (!Files.Configuration.UseAtl)
-            {
-                parch = Files.removeAtl(parch);
-            }
-            if (!Files.Configuration.UseEE)
-            {
-                parch = Files.removeEE(parch);
-            }
+            Set[] parch = Files.filterItems(Files.ItemDatabase.Parchments.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
             TabItem tb = CreateTab(Files.Language["category07"], parch);
             int sub = Files.Count(parch);
             int tot = Files.Total(parch);
