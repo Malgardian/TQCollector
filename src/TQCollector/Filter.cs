@@ -785,232 +785,47 @@ namespace TQCollector
             if (Files.Configuration.Filters.Relics.Amount == Amount.All)
             {
                 TabControl RelicsTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                {
-                    Set[] relnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Relics.Normal));
-                    Set[] relepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Relics.Epic));
-                    Set[] rellegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.Relics.Legendary)));
-                    }
-                    else
-                    {
-                        rellegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.Relics.Legendary));
-                    }
-                    sub = Files.Count(relnormal) + Files.Count(relepic) + Files.Count(rellegendary);
-                    tot = Files.Total(relnormal) + Files.Total(relepic) + Files.Total(rellegendary);
-                    if (Files.Configuration.UseIT || Files.Configuration.UseAE)
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
-                    else
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], Files.removeHades(relnormal)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], Files.removeHades(relepic)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], Files.removeHades(rellegendary)));
-                    }
-                }
-                else if (!Files.Configuration.UseR && Files.Configuration.UseAtl)
-                {
-                    Set[] relnormal = Files.removeR(Files.ItemDatabase.Relics.Normal);
-                    Set[] relepic = Files.removeR(Files.ItemDatabase.Relics.Epic);
-                    Set[] rellegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Relics.Legendary));
-                    }
-                    else
-                    {
-                        rellegendary = Files.removeR(Files.ItemDatabase.Relics.Legendary);
-                    }
-                    sub = Files.Count(relnormal) + Files.Count(relepic) + Files.Count(rellegendary);
-                    tot = Files.Total(relnormal) + Files.Total(relepic) + Files.Total(rellegendary);
-                    if (Files.Configuration.UseIT || Files.Configuration.UseAE)
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
-                    else
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], Files.removeHades(relnormal)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], Files.removeHades(relepic)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], Files.removeHades(rellegendary)));
-                    }
-                }
-                else if (Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                {
-                    Set[] relnormal = Files.removeAtl(Files.ItemDatabase.Relics.Normal);
-                    Set[] relepic = Files.removeAtl(Files.ItemDatabase.Relics.Epic);
-                    Set[] rellegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(Files.removeAtl(Files.ItemDatabase.Relics.Legendary));
-                    }
-                    else
-                    {
-                        rellegendary = Files.removeAtl(Files.ItemDatabase.Relics.Legendary);
-                    }
-                    sub = Files.Count(relnormal) + Files.Count(relepic) + Files.Count(rellegendary);
-                    tot = Files.Total(relnormal) + Files.Total(relepic) + Files.Total(rellegendary);
-                    if (Files.Configuration.UseIT || Files.Configuration.UseAE)
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
-                    else
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], Files.removeHades(relnormal)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], Files.removeHades(relepic)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], Files.removeHades(rellegendary)));
-                    }
-                }
-                else
-                {
-                    Set[] rellegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(Files.ItemDatabase.Relics.Legendary);
-                    }
-                    else
-                    {
-                        rellegendary = Files.ItemDatabase.Relics.Legendary;
-                    }
-                    sub = Files.Count(Files.ItemDatabase.Relics.Normal) + Files.Count(Files.ItemDatabase.Relics.Epic) + Files.Count(rellegendary);
-                    tot = Files.Total(Files.ItemDatabase.Relics.Normal) + Files.Total(Files.ItemDatabase.Relics.Epic) + Files.Total(rellegendary);
-                    if (Files.Configuration.UseIT || Files.Configuration.UseAE)
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], Files.ItemDatabase.Relics.Normal));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], Files.ItemDatabase.Relics.Epic));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
-                    else
-                    {
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], Files.removeHades(Files.ItemDatabase.Relics.Normal)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], Files.removeHades(Files.ItemDatabase.Relics.Epic)));
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], Files.removeHades(rellegendary)));
-                    }
-                }
+
+                Set[] relnormal = Files.filterItems(Files.ItemDatabase.Relics.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] relepic = Files.filterItems(Files.ItemDatabase.Relics.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] rellegendary = Files.filterItems(Files.ItemDatabase.Relics.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+
+                sub = Files.Count(relnormal) + Files.Count(relepic) + Files.Count(rellegendary);
+                tot = Files.Total(relnormal) + Files.Total(relepic) + Files.Total(rellegendary);
+
+                RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
+                RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
+                RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
+
                 tb.Header = generateText(Files.Language["category02"], sub, tot);
                 tb.Content = RelicsTabControl;
             }
             else if (Files.Configuration.Filters.Relics.Amount == Amount.Some)
             {
                 TabControl RelicsTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl)
+
+                if (Files.Configuration.Filters.Relics.Normal)
                 {
-                    Set[] relnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Relics.Normal));
-                    Set[] relepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Relics.Epic));
-                    Set[] rellegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.Relics.Legendary));
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(rellegendary);
-                    }
-                    if (Files.Configuration.Filters.Relics.Normal)
-                    {
-                        sub += Files.Count(relnormal);
-                        tot += Files.Total(relnormal);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
-                    }
-                    if (Files.Configuration.Filters.Relics.Epic)
-                    {
-                        sub += Files.Count(relepic);
-                        tot += Files.Total(relepic);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
-                    }
-                    if (Files.Configuration.Filters.Relics.Legendary)
-                    {
-                        sub += Files.Count(rellegendary);
-                        tot += Files.Total(rellegendary);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
+                    Set[] relnormal = Files.filterItems(Files.ItemDatabase.Relics.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(relnormal);
+                    tot += Files.Total(relnormal);
+                    RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
                 }
-                else if (!Files.Configuration.UseR && Files.Configuration.UseAtl)
+                if (Files.Configuration.Filters.Relics.Epic)
                 {
-                    Set[] relnormal = Files.removeR(Files.ItemDatabase.Relics.Normal);
-                    Set[] relepic = Files.removeR(Files.ItemDatabase.Relics.Epic);
-                    Set[] rellegendary = Files.removeR(Files.ItemDatabase.Relics.Legendary);
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(rellegendary);
-                    }
-                    if (Files.Configuration.Filters.Relics.Normal)
-                    {
-                        sub += Files.Count(relnormal);
-                        tot += Files.Total(relnormal);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
-                    }
-                    if (Files.Configuration.Filters.Relics.Epic)
-                    {
-                        sub += Files.Count(relepic);
-                        tot += Files.Total(relepic);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
-                    }
-                    if (Files.Configuration.Filters.Relics.Legendary)
-                    {
-                        sub += Files.Count(rellegendary);
-                        tot += Files.Total(rellegendary);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
+                    Set[] relepic = Files.filterItems(Files.ItemDatabase.Relics.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(relepic);
+                    tot += Files.Total(relepic);
+                    RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
                 }
-                else if (Files.Configuration.UseR && !Files.Configuration.UseAtl)
+                if (Files.Configuration.Filters.Relics.Legendary)
                 {
-                    Set[] relnormal = Files.removeAtl(Files.ItemDatabase.Relics.Normal);
-                    Set[] relepic = Files.removeAtl(Files.ItemDatabase.Relics.Epic);
-                    Set[] rellegendary = Files.removeAtl(Files.ItemDatabase.Relics.Legendary);
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(rellegendary);
-                    }
-                    if (Files.Configuration.Filters.Relics.Normal)
-                    {
-                        sub += Files.Count(relnormal);
-                        tot += Files.Total(relnormal);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], relnormal));
-                    }
-                    if (Files.Configuration.Filters.Relics.Epic)
-                    {
-                        sub += Files.Count(relepic);
-                        tot += Files.Total(relepic);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], relepic));
-                    }
-                    if (Files.Configuration.Filters.Relics.Legendary)
-                    {
-                        sub += Files.Count(rellegendary);
-                        tot += Files.Total(rellegendary);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
+                    Set[] rellegendary = Files.filterItems(Files.ItemDatabase.Relics.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(rellegendary);
+                    tot += Files.Total(rellegendary);
+                    RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
                 }
-                else
-                {
-                    Set[] rellegendary = Files.ItemDatabase.Relics.Legendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        rellegendary = Files.removeEE(rellegendary);
-                    }
-                    if (Files.Configuration.Filters.Relics.Normal)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Relics.Normal);
-                        tot += Files.Total(Files.ItemDatabase.Relics.Normal);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level07"], Files.ItemDatabase.Relics.Normal));
-                    }
-                    if (Files.Configuration.Filters.Relics.Epic)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Relics.Epic);
-                        tot += Files.Total(Files.ItemDatabase.Relics.Epic);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level08"], Files.ItemDatabase.Relics.Epic));
-                    }
-                    if (Files.Configuration.Filters.Relics.Legendary)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Relics.Legendary);
-                        tot += Files.Total(Files.ItemDatabase.Relics.Legendary);
-                        RelicsTabControl.Items.Add(CreateTab(Files.Language["level09"], rellegendary));
-                    }
-                }
+
                 tb.Header = generateText(Files.Language["category02"], sub, tot);
                 tb.Content = RelicsTabControl;
             }
