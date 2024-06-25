@@ -726,242 +726,46 @@ namespace TQCollector
             if (Files.Configuration.Filters.Scrolls.Amount == Amount.All)
             {
                 TabControl ScrollsTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] scnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Normal));
-                        Set[] scepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Epic));
-                        Set[] sclegendary = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Legendary)));
-                        sub = Files.Count(scnormal) + Files.Count(scepic) + Files.Count(sclegendary);
-                        tot = Files.Total(scnormal) + Files.Total(scepic) + Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
-                    else
-                    {
-                        Set[] scnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Normal));
-                        Set[] scepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Epic));
-                        Set[] sclegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Legendary));
-                        sub = Files.Count(scnormal) + Files.Count(scepic) + Files.Count(sclegendary);
-                        tot = Files.Total(scnormal) + Files.Total(scepic) + Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
-                }
-                else if (!Files.Configuration.UseR && Files.Configuration.UseAtl)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] scnormal = Files.removeR(Files.ItemDatabase.Scrolls.Normal);
-                        Set[] scepic = Files.removeR(Files.ItemDatabase.Scrolls.Epic);
-                        Set[] sclegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Scrolls.Legendary));
-                        sub = Files.Count(scnormal) + Files.Count(scepic) + Files.Count(sclegendary);
-                        tot = Files.Total(scnormal) + Files.Total(scepic) + Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
-                    else
-                    {
-                        Set[] scnormal = Files.removeR(Files.ItemDatabase.Scrolls.Normal);
-                        Set[] scepic = Files.removeR(Files.ItemDatabase.Scrolls.Epic);
-                        Set[] sclegendary = Files.removeR(Files.ItemDatabase.Scrolls.Legendary);
-                        sub = Files.Count(scnormal) + Files.Count(scepic) + Files.Count(sclegendary);
-                        tot = Files.Total(scnormal) + Files.Total(scepic) + Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
-                }
-                else if (Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] scnormal = Files.removeAtl(Files.ItemDatabase.Scrolls.Normal);
-                        Set[] scepic = Files.removeAtl(Files.ItemDatabase.Scrolls.Epic);
-                        Set[] sclegendary = Files.removeEE(Files.removeAtl(Files.ItemDatabase.Scrolls.Legendary));
-                        sub = Files.Count(scnormal) + Files.Count(scepic) + Files.Count(sclegendary);
-                        tot = Files.Total(scnormal) + Files.Total(scepic) + Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
-                    else
-                    {
-                        Set[] scnormal = Files.removeAtl(Files.ItemDatabase.Scrolls.Normal);
-                        Set[] scepic = Files.removeAtl(Files.ItemDatabase.Scrolls.Epic);
-                        Set[] sclegendary = Files.removeAtl(Files.ItemDatabase.Scrolls.Legendary);
-                        sub = Files.Count(scnormal) + Files.Count(scepic) + Files.Count(sclegendary);
-                        tot = Files.Total(scnormal) + Files.Total(scepic) + Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
-                }
-                else
-                {
-                    Set[] sclegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        sclegendary = Files.removeEE(Files.ItemDatabase.Scrolls.Legendary);
-                    }
-                    else
-                    {
-                        sclegendary = Files.ItemDatabase.Scrolls.Legendary;
-                    }
-                    sub = Files.Count(Files.ItemDatabase.Scrolls.Normal) + Files.Count(Files.ItemDatabase.Scrolls.Epic) + Files.Count(sclegendary);
-                    tot = Files.Total(Files.ItemDatabase.Scrolls.Normal) + Files.Total(Files.ItemDatabase.Scrolls.Epic) + Files.Total(sclegendary);
-                    ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], Files.ItemDatabase.Scrolls.Normal));
-                    ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], Files.ItemDatabase.Scrolls.Epic));
-                    ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                }
+
+                Set[] scnormal = Files.filterItems(Files.ItemDatabase.Scrolls.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] scepic = Files.filterItems(Files.ItemDatabase.Scrolls.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] sclegendary = Files.filterItems(Files.ItemDatabase.Scrolls.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                
+                sub = Files.Count(scnormal) + Files.Count(scepic) + Files.Count(sclegendary);
+                tot = Files.Total(scnormal) + Files.Total(scepic) + Files.Total(sclegendary);
+                ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
+                ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
+                ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
+
                 tb.Header = generateText(Files.Language["category10"], sub, tot);
                 tb.Content = ScrollsTabControl;
             }
             else if (Files.Configuration.Filters.Scrolls.Amount == Amount.Some)
             {
                 TabControl ScrollsTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl)
+
+                if (Files.Configuration.Filters.Scrolls.Normal)
                 {
-                    Set[] scnormal;
-                    Set[] scepic;
-                    Set[] sclegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        scnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Normal));
-                        scepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Epic));
-                        sclegendary = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Legendary)));
-                    }
-                    else
-                    {
-                        scnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Normal));
-                        scepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Epic));
-                        sclegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.Scrolls.Legendary));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Normal)
-                    {
-                        sub += Files.Count(scnormal);
-                        tot += Files.Total(scnormal);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Epic)
-                    {
-                        sub += Files.Count(scepic);
-                        tot += Files.Total(scepic);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Legendary)
-                    {
-                        sub += Files.Count(sclegendary);
-                        tot += Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
+                    Set[] scnormal = Files.filterItems(Files.ItemDatabase.Scrolls.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(scnormal);
+                    tot += Files.Total(scnormal);
+                    ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
                 }
-                else if (!Files.Configuration.UseR && Files.Configuration.UseAtl)
+                if (Files.Configuration.Filters.Scrolls.Epic)
                 {
-                    Set[] scnormal;
-                    Set[] scepic;
-                    Set[] sclegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        scnormal = Files.removeR(Files.ItemDatabase.Scrolls.Normal);
-                        scepic = Files.removeR(Files.ItemDatabase.Scrolls.Epic);
-                        sclegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Scrolls.Legendary));
-                    }
-                    else
-                    {
-                        scnormal =Files.removeR(Files.ItemDatabase.Scrolls.Normal);
-                        scepic = Files.removeR(Files.ItemDatabase.Scrolls.Epic);
-                        sclegendary = Files.removeR(Files.ItemDatabase.Scrolls.Legendary);
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Normal)
-                    {
-                        sub += Files.Count(scnormal);
-                        tot += Files.Total(scnormal);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Epic)
-                    {
-                        sub += Files.Count(scepic);
-                        tot += Files.Total(scepic);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Legendary)
-                    {
-                        sub += Files.Count(sclegendary);
-                        tot += Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
+                    Set[] scepic = Files.filterItems(Files.ItemDatabase.Scrolls.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(scepic);
+                    tot += Files.Total(scepic);
+                    ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
                 }
-                else if (Files.Configuration.UseR && !Files.Configuration.UseAtl)
+                if (Files.Configuration.Filters.Scrolls.Legendary)
                 {
-                    Set[] scnormal;
-                    Set[] scepic;
-                    Set[] sclegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        scnormal = Files.removeAtl(Files.ItemDatabase.Scrolls.Normal);
-                        scepic = Files.removeAtl(Files.ItemDatabase.Scrolls.Epic);
-                        sclegendary = Files.removeEE(Files.removeAtl(Files.ItemDatabase.Scrolls.Legendary));
-                    }
-                    else
-                    {
-                        scnormal = Files.removeAtl(Files.ItemDatabase.Scrolls.Normal);
-                        scepic = Files.removeAtl(Files.ItemDatabase.Scrolls.Epic);
-                        sclegendary = Files.removeAtl(Files.ItemDatabase.Scrolls.Legendary);
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Normal)
-                    {
-                        sub += Files.Count(scnormal);
-                        tot += Files.Total(scnormal);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], scnormal));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Epic)
-                    {
-                        sub += Files.Count(scepic);
-                        tot += Files.Total(scepic);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], scepic));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Legendary)
-                    {
-                        sub += Files.Count(sclegendary);
-                        tot += Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
+                    Set[] sclegendary = Files.filterItems(Files.ItemDatabase.Scrolls.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(sclegendary);
+                    tot += Files.Total(sclegendary);
+                    ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
                 }
-                else
-                {
-                    Set[] sclegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        sclegendary = Files.removeEE(Files.ItemDatabase.Scrolls.Legendary);
-                    }
-                    else
-                    {
-                        sclegendary = Files.ItemDatabase.Scrolls.Legendary;
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Normal)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Scrolls.Normal);
-                        tot += Files.Total(Files.ItemDatabase.Scrolls.Normal);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level01"], Files.ItemDatabase.Scrolls.Normal));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Epic)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Scrolls.Epic);
-                        tot += Files.Total(Files.ItemDatabase.Scrolls.Epic);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level02"], Files.ItemDatabase.Scrolls.Epic));
-                    }
-                    if (Files.Configuration.Filters.Scrolls.Legendary)
-                    {
-                        sub += Files.Count(sclegendary);
-                        tot += Files.Total(sclegendary);
-                        ScrollsTabControl.Items.Add(CreateTab(Files.Language["level03"], sclegendary));
-                    }
-                }
+
                 tb.Header = generateText(Files.Language["category10"], sub, tot);
                 tb.Content = ScrollsTabControl;
             }
