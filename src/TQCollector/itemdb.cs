@@ -231,7 +231,11 @@ namespace TQCollector {
         
         private string idField;
         
+        private bool isBGField;
+        
         private bool isITField;
+        
+        private bool isSPField;
         
         private bool isRField;
         
@@ -265,12 +269,34 @@ namespace TQCollector {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool isBG {
+            get {
+                return this.isBGField;
+            }
+            set {
+                this.isBGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
         public bool isIT {
             get {
                 return this.isITField;
             }
             set {
                 this.isITField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool isSP {
+            get {
+                return this.isSPField;
+            }
+            set {
+                this.isSPField = value;
             }
         }
         

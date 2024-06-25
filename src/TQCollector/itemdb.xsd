@@ -125,7 +125,9 @@
     <xs:complexType>
       <xs:attribute name="dbr" use="required"/>
       <xs:attribute name="id" use="required" type="xs:string"/>
+      <xs:attribute name="isBG" use="required" type="xs:boolean"/>
       <xs:attribute name="isIT" use="required" type="xs:boolean"/>
+      <xs:attribute name="isSP" use="required" type="xs:boolean"/>
       <xs:attribute name="isR" use="required" type="xs:boolean"/>
       <xs:attribute name="isAtl" use="required" type="xs:boolean"/>
       <xs:attribute name="isEE" use="required" type="xs:boolean"/>
