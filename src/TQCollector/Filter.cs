@@ -1566,330 +1566,38 @@ namespace TQCollector
             TabItem tb = new TabItem();
             int sub = 0;
             int tot = 0;
+            TabControl SetsTabControl = new TabControl();
 
             if (Files.Configuration.Filters.Sets.Amount == Amount.All)
             {
-                TabControl SetsTabControl = new TabControl();
-                if (!Files.Configuration.UseSP && !Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                {
-                    Set[] es = Files.removeSP(Files.ItemDatabase.Sets.Epic);
-                    Set[] ls = Files.removeSP(Files.ItemDatabase.Sets.Legendary);
-                    Set[] er = Files.removeAtl(Files.removeR(es));
-                    Set[] lr = Files.removeAtl(Files.removeR(ls));
-                    if (!Files.Configuration.UseEE)
-                    {
-                        er = Files.removeEE(er);
-                        lr = Files.removeEE(lr);
-                    }
-                    sub = Files.Count(er) + Files.Count(lr);
-                    tot = Files.Total(er) + Files.Total(lr);
-                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], lr));
-                }
-                else if (!Files.Configuration.UseSP)
-                {
-                    if (!Files.Configuration.UseR)
-                    {
-                        Set[] es = Files.removeR(Files.removeSP(Files.ItemDatabase.Sets.Epic));
-                        Set[] ls = Files.removeR(Files.removeSP(Files.ItemDatabase.Sets.Legendary));
-                        if (!Files.Configuration.UseEE)
-                        {
-                            es = Files.removeEE(es);
-                            ls = Files.removeEE(ls);
-                        }
-                        sub = Files.Count(es) + Files.Count(ls);
-                        tot = Files.Total(es) + Files.Total(ls);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], es));
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], ls));
-                    }
-                    else if (!Files.Configuration.UseAtl)
-                    {
-                        Set[] es = Files.removeAtl(Files.removeSP(Files.ItemDatabase.Sets.Epic));
-                        Set[] ls = Files.removeAtl(Files.removeSP(Files.ItemDatabase.Sets.Legendary));
-                        if (!Files.Configuration.UseEE)
-                        {
-                            es = Files.removeEE(es);
-                            ls = Files.removeEE(ls);
-                        }
-                        sub = Files.Count(es) + Files.Count(ls);
-                        tot = Files.Total(es) + Files.Total(ls);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], es));
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], ls));
-                    }
-                    else
-                    {
-                        Set[] es = Files.removeSP(Files.ItemDatabase.Sets.Epic);
-                        Set[] ls = Files.removeSP(Files.ItemDatabase.Sets.Legendary);
-                        if (!Files.Configuration.UseEE)
-                        {
-                            es = Files.removeEE(es);
-                            ls = Files.removeEE(ls);
-                        }
-                        sub = Files.Count(es) + Files.Count(ls);
-                        tot = Files.Total(es) + Files.Total(ls);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], es));
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], ls));
-                    }
-                }
-                else if (!Files.Configuration.UseR)
-                {
-                    if (!Files.Configuration.UseAtl)
-                    {
-                        Set[] er = Files.removeAtl(Files.removeR(Files.ItemDatabase.Sets.Epic));
-                        Set[] lr = Files.removeAtl(Files.removeR(Files.ItemDatabase.Sets.Legendary));
-                        if (!Files.Configuration.UseEE)
-                        {
-                            er = Files.removeEE(er);
-                            lr = Files.removeEE(lr);
-                        }
-                        sub = Files.Count(er) + Files.Count(lr);
-                        tot = Files.Total(er) + Files.Total(lr);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], lr));
-                    }
-                    else
-                    {
-                        Set[] er = Files.removeR(Files.ItemDatabase.Sets.Epic);
-                        Set[] lr = Files.removeR(Files.ItemDatabase.Sets.Legendary);
-                        if (!Files.Configuration.UseEE)
-                        {
-                            er = Files.removeEE(er);
-                            lr = Files.removeEE(lr);
-                        }
-                        sub = Files.Count(er) + Files.Count(lr);
-                        tot = Files.Total(er) + Files.Total(lr);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], lr));
-                    }
-                }
-                else if (!Files.Configuration.UseAtl)
-                {
-                    Set[] er = Files.removeAtl(Files.ItemDatabase.Sets.Epic);
-                    Set[] lr = Files.removeAtl(Files.ItemDatabase.Sets.Legendary);
-                    if (!Files.Configuration.UseEE)
-                    {
-                        er = Files.removeEE(er);
-                        lr = Files.removeEE(lr);
-                    }
-                    sub = Files.Count(er) + Files.Count(lr);
-                    tot = Files.Total(er) + Files.Total(lr);
-                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], lr));
-                }
-                else
-                {
-                    Set[] er = Files.ItemDatabase.Sets.Epic;
-                    Set[] lr = Files.ItemDatabase.Sets.Legendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        er = Files.removeEE(er);
-                        lr = Files.removeEE(lr);
-                    }
-                    sub = Files.Count(er) + Files.Count(lr);
-                    tot = Files.Total(er) + Files.Total(lr);
-                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], lr));
-                }
+                Set[] epicSets = Files.filterItems(Files.ItemDatabase.Sets.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] legendarySets = Files.filterItems(Files.ItemDatabase.Sets.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+
+                sub = Files.Count(epicSets) + Files.Count(legendarySets);
+                tot = Files.Total(epicSets) + Files.Total(legendarySets);
+                SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], epicSets));
+                SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], legendarySets));
                 
                 tb.Header = generateText(Files.Language["category05"], sub, tot);
                 tb.Content = SetsTabControl;
             }
             else if (Files.Configuration.Filters.Sets.Amount == Amount.Some)
             {
-                TabControl SetsTabControl = new TabControl();
                 if (Files.Configuration.Filters.Sets.Epic)
                 {
-                    if (!Files.Configuration.UseSP && !Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                    {
-                        Set[] ers = Files.removeAtl(Files.removeR(Files.removeSP(Files.ItemDatabase.Sets.Epic)));
-                        if (!Files.Configuration.UseEE)
-                        {
-                            ers = Files.removeEE(ers);
-                        }
-                        sub += Files.Count(ers);
-                        tot += Files.Total(ers);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], ers));
-                    }
-                    else if (!Files.Configuration.UseSP)
-                    {
-                        if (!Files.Configuration.UseR)
-                        {
-                            Set[] es = Files.removeR(Files.removeSP(Files.ItemDatabase.Sets.Epic));
-                            if (!Files.Configuration.UseEE)
-                            {
-                                es = Files.removeEE(es);
-                            }
-                            sub += Files.Count(es);
-                            tot += Files.Total(es);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], es));
-                        }
-                        else if (!Files.Configuration.UseAtl)
-                        {
-                            Set[] es = Files.removeAtl(Files.removeSP(Files.ItemDatabase.Sets.Epic));
-                            if (!Files.Configuration.UseEE)
-                            {
-                                es = Files.removeEE(es);
-                            }
-                            sub += Files.Count(es);
-                            tot += Files.Total(es);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], es));
-                        }
-                        else
-                        {
-                            Set[] es = Files.removeSP(Files.ItemDatabase.Sets.Epic);
-                            if (!Files.Configuration.UseEE)
-                            {
-                                es = Files.removeEE(es);
-                            }
-                            sub += Files.Count(es);
-                            tot += Files.Total(es);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], es));
-                        }
-                    }
-                    else if (!Files.Configuration.UseR)
-                    {
-                        if (!Files.Configuration.UseAtl)
-                        {
-                            Set[] er = Files.removeAtl(Files.removeR(Files.ItemDatabase.Sets.Epic));
-                            if (!Files.Configuration.UseEE)
-                            {
-                                er = Files.removeEE(er);
-                            }
-                            sub += Files.Count(er);
-                            tot += Files.Total(er);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                        }
-                        else
-                        {
-                            Set[] er = Files.removeR(Files.ItemDatabase.Sets.Epic);
-                            if (!Files.Configuration.UseEE)
-                            {
-                                er = Files.removeEE(er);
-                            }
-                            sub += Files.Count(er);
-                            tot += Files.Total(er);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                        }
-                    }
-                    else if (!Files.Configuration.UseAtl)
-                    {
-                        Set[] er = Files.removeAtl(Files.ItemDatabase.Sets.Epic);
-                        if (!Files.Configuration.UseEE)
-                        {
-                            er = Files.removeEE(er);
-                        }
-                        sub += Files.Count(er);
-                        tot += Files.Total(er);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                    }
-                    else
-                    {
-                        Set[] er = Files.ItemDatabase.Sets.Epic;
-                        if (!Files.Configuration.UseEE)
-                        {
-                            er = Files.removeEE(er);
-                        }
-                        sub += Files.Count(er);
-                        tot += Files.Total(er);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], er));
-                    }
+                    Set[] epicSets = Files.filterItems(Files.ItemDatabase.Sets.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+
+                    sub += Files.Count(epicSets);
+                    tot += Files.Total(epicSets);
+                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], epicSets));
                 }
                 if (Files.Configuration.Filters.Sets.Legendary)
                 {
-                    if (!Files.Configuration.UseSP && !Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                    {
-                        Set[] lrs = Files.removeAtl(Files.removeR(Files.removeSP(Files.ItemDatabase.Sets.Legendary)));
-                        if (!Files.Configuration.UseEE)
-                        {
-                            lrs = Files.removeEE(lrs);
-                        }
-                        sub += Files.Count(lrs);
-                        tot += Files.Total(lrs);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], lrs));
-                    }
-                    else if (!Files.Configuration.UseSP)
-                    {
-                        if (!Files.Configuration.UseR)
-                        {
-                            Set[] ls = Files.removeR(Files.removeSP(Files.ItemDatabase.Sets.Legendary));
-                            if (!Files.Configuration.UseEE)
-                            {
-                                ls = Files.removeEE(ls);
-                            }
-                            sub += Files.Count(ls);
-                            tot += Files.Total(ls);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], ls));
-                        }
-                        else if (!Files.Configuration.UseAtl)
-                        {
-                            Set[] ls = Files.removeAtl(Files.removeSP(Files.ItemDatabase.Sets.Legendary));
-                            if (!Files.Configuration.UseEE)
-                            {
-                                ls = Files.removeEE(ls);
-                            }
-                            sub += Files.Count(ls);
-                            tot += Files.Total(ls);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], ls));
-                        }
-                        else
-                        {
-                            Set[] ls = Files.removeSP(Files.ItemDatabase.Sets.Legendary);
-                            if (!Files.Configuration.UseEE)
-                            {
-                                ls = Files.removeEE(ls);
-                            }
-                            sub += Files.Count(ls);
-                            tot += Files.Total(ls);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], ls));
-                        }
-                    }
-                    else if (!Files.Configuration.UseR)
-                    {
-                        if (!Files.Configuration.UseAtl)
-                        {
-                            Set[] lr = Files.removeAtl(Files.removeR(Files.ItemDatabase.Sets.Legendary));
-                            if (!Files.Configuration.UseEE)
-                            {
-                                lr = Files.removeEE(lr);
-                            }
-                            sub += Files.Count(lr);
-                            tot += Files.Total(lr);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], lr));
-                        }
-                        else
-                        {
-                            Set[] lr = Files.removeR(Files.ItemDatabase.Sets.Legendary);
-                            if (!Files.Configuration.UseEE)
-                            {
-                                lr = Files.removeEE(lr);
-                            }
-                            sub += Files.Count(lr);
-                            tot += Files.Total(lr);
-                            SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], lr));
-                        }
-                    }
-                    else if (!Files.Configuration.UseAtl)
-                    {
-                        Set[] lr = Files.removeAtl(Files.ItemDatabase.Sets.Legendary);
-                        if (!Files.Configuration.UseEE)
-                        {
-                            lr = Files.removeEE(lr);
-                        }
-                        sub += Files.Count(lr);
-                        tot += Files.Total(lr);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level05"], lr));
-                    }
-                    else
-                    {
-                        Set[] lr = Files.ItemDatabase.Sets.Legendary;
-                        if (!Files.Configuration.UseEE)
-                        {
-                            lr = Files.removeEE(lr);
-                        }
-                        sub += Files.Count(lr);
-                        tot += Files.Total(lr);
-                        SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], lr));
-                    }
+                    Set[] legendarySets = Files.filterItems(Files.ItemDatabase.Sets.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+
+                    sub += Files.Count(legendarySets);
+                    tot += Files.Total(legendarySets);
+                    SetsTabControl.Items.Add(CreateListTab(Files.Language["level06"], legendarySets));
                 }
                 tb.Header = generateText(Files.Language["category05"], sub, tot);
                 tb.Content = SetsTabControl;

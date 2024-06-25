@@ -1208,7 +1208,7 @@ namespace TQCollector
                 List<Item> filteredList = new List<Item>();
                 for (int i = 0; i < s.Item.Length; i++)
                 {
-                    if (listBG && s.Item[i].isIT == false && s.Item[i].isR == false && s.Item[i].isAtl == false && s.Item[i].isEE == false)
+                    if (listBG && s.Item[i].isBG)
                     {
                         filteredList.Add(s.Item[i]); // item is from the base game? add it
                     }
@@ -1216,7 +1216,7 @@ namespace TQCollector
                     {
                         filteredList.Add(s.Item[i]); // item is from IT? add it
                     }
-                    if (listSP && s.Item[i].dbr.Contains("\\z_"))
+                    if (listSP && s.Item[i].isSP) // && s.Item[i].dbr.Contains("\\z_"))
                     {
                         filteredList.Add(s.Item[i]); // item is from the secret passage? add it
                     }
