@@ -667,120 +667,46 @@ namespace TQCollector
             if (Files.Configuration.Filters.Formulae.Amount == Amount.All)
             {
                 TabControl FormulaeTabControl = new TabControl();
-                if (!Files.Configuration.UseR)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] fornormal = Files.removeR(Files.ItemDatabase.Formulae.Normal);
-                        Set[] forepic = Files.removeR(Files.ItemDatabase.Formulae.Epic);
-                        Set[] forlegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Formulae.Legendary));
-                        sub = Files.Count(fornormal) + Files.Count(forepic) + Files.Count(forlegendary);
-                        tot = Files.Total(fornormal) + Files.Total(forepic) + Files.Total(forlegendary);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level01"], fornormal));
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level02"], forepic));
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level03"], forlegendary));
-                    }
-                    else
-                    {
-                        Set[] fornormal = Files.removeR(Files.ItemDatabase.Formulae.Normal);
-                        Set[] forepic = Files.removeR(Files.ItemDatabase.Formulae.Epic);
-                        Set[] forlegendary = Files.removeR(Files.ItemDatabase.Formulae.Legendary);
-                        sub = Files.Count(fornormal) + Files.Count(forepic) + Files.Count(forlegendary);
-                        tot = Files.Total(fornormal) + Files.Total(forepic) + Files.Total(forlegendary);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level01"], fornormal));
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level02"], forepic));
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level03"], forlegendary));
-                    }
-                }
-                else
-                {
-                    Set[] forlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        forlegendary = Files.removeEE(Files.ItemDatabase.Formulae.Legendary);
-                    }
-                    else
-                    {
-                        forlegendary = Files.ItemDatabase.Formulae.Legendary;
-                    }
-                    sub = Files.Count(Files.ItemDatabase.Formulae.Normal) + Files.Count(Files.ItemDatabase.Formulae.Epic) + Files.Count(forlegendary);
-                    tot = Files.Total(Files.ItemDatabase.Formulae.Normal) + Files.Total(Files.ItemDatabase.Formulae.Epic) + Files.Total(forlegendary);
-                    FormulaeTabControl.Items.Add(CreateTab(Files.Language["level01"], Files.ItemDatabase.Formulae.Normal));
-                    FormulaeTabControl.Items.Add(CreateTab(Files.Language["level02"], Files.ItemDatabase.Formulae.Epic));
-                    FormulaeTabControl.Items.Add(CreateTab(Files.Language["level03"], forlegendary));
-                }
+
+                Set[] fornormal = Files.filterItems(Files.ItemDatabase.Formulae.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] forepic = Files.filterItems(Files.ItemDatabase.Formulae.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] forlegendary = Files.filterItems(Files.ItemDatabase.Formulae.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+
+                sub = Files.Count(fornormal) + Files.Count(forepic) + Files.Count(forlegendary);
+                tot = Files.Total(fornormal) + Files.Total(forepic) + Files.Total(forlegendary);
+                FormulaeTabControl.Items.Add(CreateTab(Files.Language["level01"], fornormal));
+                FormulaeTabControl.Items.Add(CreateTab(Files.Language["level02"], forepic));
+                FormulaeTabControl.Items.Add(CreateTab(Files.Language["level03"], forlegendary));
+
                 tb.Header = generateText(Files.Language["category08"], sub, tot);
                 tb.Content = FormulaeTabControl;
             }
             else if (Files.Configuration.Filters.Formulae.Amount == Amount.Some)
             {
                 TabControl FormulaeTabControl = new TabControl();
-                if (!Files.Configuration.UseR)
+
+                if (Files.Configuration.Filters.Formulae.Normal)
                 {
-                    Set[] fornormal;
-                    Set[] forepic;
-                    Set[] forlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        fornormal = Files.removeR(Files.ItemDatabase.Formulae.Normal);
-                        forepic = Files.removeR(Files.ItemDatabase.Formulae.Epic);
-                        forlegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Formulae.Legendary));
-                    }
-                    else
-                    {
-                        fornormal = Files.removeR(Files.ItemDatabase.Formulae.Normal);
-                        forepic = Files.removeR(Files.ItemDatabase.Formulae.Epic);
-                        forlegendary = Files.removeR(Files.ItemDatabase.Formulae.Legendary);
-                    }
-                    if (Files.Configuration.Filters.Formulae.Normal)
-                    {
-                        sub += Files.Count(fornormal);
-                        tot += Files.Total(fornormal);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level01"], fornormal));
-                    }
-                    if (Files.Configuration.Filters.Formulae.Epic)
-                    {
-                        sub += Files.Count(forepic);
-                        tot += Files.Total(forepic);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level02"], forepic));
-                    }
-                    if (Files.Configuration.Filters.Formulae.Legendary)
-                    {
-                        sub += Files.Count(forlegendary);
-                        tot += Files.Total(forlegendary);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level03"], forlegendary));
-                    }
+                    Set[] fornormal = Files.filterItems(Files.ItemDatabase.Formulae.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(fornormal);
+                    tot += Files.Total(fornormal);
+                    FormulaeTabControl.Items.Add(CreateTab(Files.Language["level01"], fornormal));
                 }
-                else
+                if (Files.Configuration.Filters.Formulae.Epic)
                 {
-                    Set[] forlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        forlegendary = Files.removeEE(Files.ItemDatabase.Formulae.Legendary);
-                    }
-                    else
-                    {
-                        forlegendary = Files.ItemDatabase.Formulae.Legendary;
-                    }
-                    if (Files.Configuration.Filters.Formulae.Normal)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Formulae.Normal);
-                        tot += Files.Total(Files.ItemDatabase.Formulae.Normal);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level01"], Files.ItemDatabase.Formulae.Normal));
-                    }
-                    if (Files.Configuration.Filters.Formulae.Epic)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Formulae.Epic);
-                        tot += Files.Total(Files.ItemDatabase.Formulae.Epic);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level02"], Files.ItemDatabase.Formulae.Epic));
-                    }
-                    if (Files.Configuration.Filters.Formulae.Legendary)
-                    {
-                        sub += Files.Count(forlegendary);
-                        tot += Files.Total(forlegendary);
-                        FormulaeTabControl.Items.Add(CreateTab(Files.Language["level03"], forlegendary));
-                    }
+                    Set[] forepic = Files.filterItems(Files.ItemDatabase.Formulae.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(forepic);
+                    tot += Files.Total(forepic);
+                    FormulaeTabControl.Items.Add(CreateTab(Files.Language["level02"], forepic));
                 }
+                if (Files.Configuration.Filters.Formulae.Legendary)
+                {
+                    Set[] forlegendary = Files.filterItems(Files.ItemDatabase.Formulae.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(forlegendary);
+                    tot += Files.Total(forlegendary);
+                    FormulaeTabControl.Items.Add(CreateTab(Files.Language["level03"], forlegendary));
+                }
+
                 tb.Header = generateText(Files.Language["category08"], sub, tot);
                 tb.Content = FormulaeTabControl;
             }
