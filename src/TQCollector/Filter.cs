@@ -595,235 +595,46 @@ namespace TQCollector
             if (Files.Configuration.Filters.Charms.Amount == Amount.All)
             {
                 TabControl CharmsTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] chnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Normal));
-                        Set[] chepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Epic));
-                        Set[] chlegendary = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Legendary)));
-                        sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
-                        tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                    else
-                    {
-                        Set[] chnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Normal));
-                        Set[] chepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Epic));
-                        Set[] chlegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Legendary));
-                        sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
-                        tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                }
-                else if (!Files.Configuration.UseAtl && Files.Configuration.UseR)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] chnormal = Files.removeAtl(Files.ItemDatabase.Charms.Normal);
-                        Set[] chepic = Files.removeAtl(Files.ItemDatabase.Charms.Epic);
-                        Set[] chlegendary = Files.removeEE(Files.removeAtl(Files.ItemDatabase.Charms.Legendary));
-                        sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
-                        tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                    else
-                    {
-                        Set[] chnormal = Files.removeAtl(Files.ItemDatabase.Charms.Normal);
-                        Set[] chepic = Files.removeAtl(Files.ItemDatabase.Charms.Epic);
-                        Set[] chlegendary = Files.removeAtl(Files.ItemDatabase.Charms.Legendary);
-                        sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
-                        tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                }
-                else if (Files.Configuration.UseAtl && !Files.Configuration.UseR)
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] chnormal = Files.removeR(Files.ItemDatabase.Charms.Normal);
-                        Set[] chepic = Files.removeR(Files.ItemDatabase.Charms.Epic);
-                        Set[] chlegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Charms.Legendary));
-                        sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
-                        tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                    else
-                    {
-                        Set[] chnormal = Files.removeR(Files.ItemDatabase.Charms.Normal);
-                        Set[] chepic = Files.removeR(Files.ItemDatabase.Charms.Epic);
-                        Set[] chlegendary = Files.removeR(Files.ItemDatabase.Charms.Legendary);
-                        sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
-                        tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                }
-                else
-                {
-                    if (!Files.Configuration.UseEE)
-                    {
-                        Set[] chnormal = Files.ItemDatabase.Charms.Normal;
-                        Set[] chepic = Files.ItemDatabase.Charms.Epic;
-                        Set[] chlegendary = Files.removeEE(Files.ItemDatabase.Charms.Legendary);
-                        sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
-                        tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                    else
-                    {
-                        sub = Files.Count(Files.ItemDatabase.Charms.Normal) + Files.Count(Files.ItemDatabase.Charms.Epic) + Files.Count(Files.ItemDatabase.Charms.Legendary);
-                        tot = Files.Total(Files.ItemDatabase.Charms.Normal) + Files.Total(Files.ItemDatabase.Charms.Epic) + Files.Total(Files.ItemDatabase.Charms.Legendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], Files.ItemDatabase.Charms.Normal));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], Files.ItemDatabase.Charms.Epic));
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], Files.ItemDatabase.Charms.Legendary));
-                    }
-                }
+
+                Set[] chnormal = Files.filterItems(Files.ItemDatabase.Charms.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] chepic = Files.filterItems(Files.ItemDatabase.Charms.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                Set[] chlegendary = Files.filterItems(Files.ItemDatabase.Charms.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+
+                sub = Files.Count(chnormal) + Files.Count(chepic) + Files.Count(chlegendary);
+                tot = Files.Total(chnormal) + Files.Total(chepic) + Files.Total(chlegendary);
+                CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
+                CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
+                CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
+
                 tb.Header = generateText(Files.Language["category03"], sub, tot);
                 tb.Content = CharmsTabControl;
             }
             if (Files.Configuration.Filters.Charms.Amount == Amount.Some)
             {
                 TabControl CharmsTabControl = new TabControl();
-                if (!Files.Configuration.UseR && !Files.Configuration.UseAtl)
+
+                if (Files.Configuration.Filters.Charms.Normal)
                 {
-                    Set[] chnormal = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Normal));
-                    Set[] chepic = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Epic));
-                    Set[] chlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        chlegendary = Files.removeEE(Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Legendary)));
-                    }
-                    else
-                    {
-                        chlegendary = Files.removeAtl(Files.removeR(Files.ItemDatabase.Charms.Legendary));
-                    }
-                    if (Files.Configuration.Filters.Charms.Normal)
-                    {
-                        sub += Files.Count(chnormal);
-                        tot += Files.Total(chnormal);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                    }
-                    if (Files.Configuration.Filters.Charms.Epic)
-                    {
-                        sub += Files.Count(chepic);
-                        tot += Files.Total(chepic);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                    }
-                    if (Files.Configuration.Filters.Charms.Legendary)
-                    {
-                        sub += Files.Count(chlegendary);
-                        tot += Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
+                    Set[] chnormal = Files.filterItems(Files.ItemDatabase.Charms.Normal, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(chnormal);
+                    tot += Files.Total(chnormal);
+                    CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
                 }
-                else if (Files.Configuration.UseR && !Files.Configuration.UseAtl)
+                if (Files.Configuration.Filters.Charms.Epic)
                 {
-                    Set[] chnormal = Files.removeAtl(Files.ItemDatabase.Charms.Normal);
-                    Set[] chepic = Files.removeAtl(Files.ItemDatabase.Charms.Epic);
-                    Set[] chlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        chlegendary = Files.removeEE(Files.removeAtl(Files.ItemDatabase.Charms.Legendary));
-                    }
-                    else
-                    {
-                        chlegendary = Files.removeAtl(Files.ItemDatabase.Charms.Legendary);
-                    }
-                    if (Files.Configuration.Filters.Charms.Normal)
-                    {
-                        sub += Files.Count(chnormal);
-                        tot += Files.Total(chnormal);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                    }
-                    if (Files.Configuration.Filters.Charms.Epic)
-                    {
-                        sub += Files.Count(chepic);
-                        tot += Files.Total(chepic);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                    }
-                    if (Files.Configuration.Filters.Charms.Legendary)
-                    {
-                        sub += Files.Count(chlegendary);
-                        tot += Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
+                    Set[] chepic = Files.filterItems(Files.ItemDatabase.Charms.Epic, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(chepic);
+                    tot += Files.Total(chepic);
+                    CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
                 }
-                else if (!Files.Configuration.UseR && Files.Configuration.UseAtl)
+                if (Files.Configuration.Filters.Charms.Legendary)
                 {
-                    Set[] chnormal = Files.removeR(Files.ItemDatabase.Charms.Normal);
-                    Set[] chepic = Files.removeR(Files.ItemDatabase.Charms.Epic);
-                    Set[] chlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        chlegendary = Files.removeEE(Files.removeR(Files.ItemDatabase.Charms.Legendary));
-                    }
-                    else
-                    {
-                        chlegendary = Files.removeR(Files.ItemDatabase.Charms.Legendary);
-                    }
-                    if (Files.Configuration.Filters.Charms.Normal)
-                    {
-                        sub += Files.Count(chnormal);
-                        tot += Files.Total(chnormal);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], chnormal));
-                    }
-                    if (Files.Configuration.Filters.Charms.Epic)
-                    {
-                        sub += Files.Count(chepic);
-                        tot += Files.Total(chepic);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], chepic));
-                    }
-                    if (Files.Configuration.Filters.Charms.Legendary)
-                    {
-                        sub += Files.Count(chlegendary);
-                        tot += Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
+                    Set[] chlegendary = Files.filterItems(Files.ItemDatabase.Charms.Legendary, Files.Configuration.UseBG, Files.Configuration.UseIT, Files.Configuration.UseSP, Files.Configuration.UseR, Files.Configuration.UseAtl, Files.Configuration.UseEE);
+                    sub += Files.Count(chlegendary);
+                    tot += Files.Total(chlegendary);
+                    CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
                 }
-                else
-                {
-                    Set[] chlegendary;
-                    if (!Files.Configuration.UseEE)
-                    {
-                        chlegendary = Files.removeEE(Files.ItemDatabase.Charms.Legendary);
-                    }
-                    else
-                    {
-                        chlegendary = Files.ItemDatabase.Charms.Legendary;
-                    }
-                    if (Files.Configuration.Filters.Charms.Normal)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Charms.Normal);
-                        tot += Files.Total(Files.ItemDatabase.Charms.Normal);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level04"], Files.ItemDatabase.Charms.Normal));
-                    }
-                    if (Files.Configuration.Filters.Charms.Epic)
-                    {
-                        sub += Files.Count(Files.ItemDatabase.Charms.Epic);
-                        tot += Files.Total(Files.ItemDatabase.Charms.Epic);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level05"], Files.ItemDatabase.Charms.Epic));
-                    }
-                    if (Files.Configuration.Filters.Charms.Legendary)
-                    {
-                        sub += Files.Count(chlegendary);
-                        tot += Files.Total(chlegendary);
-                        CharmsTabControl.Items.Add(CreateTab(Files.Language["level06"], chlegendary));
-                    }
-                }
+
                 tb.Header = generateText(Files.Language["category03"], sub, tot);
                 tb.Content = CharmsTabControl;
             }
