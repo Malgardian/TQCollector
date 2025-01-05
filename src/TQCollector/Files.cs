@@ -1758,8 +1758,14 @@ namespace TQCollector
 
             foreach (string s in players)
             {
-                if (!LoadCharacter(s + "\\player.chr")) return false;
-                if (!LoadStash(s + "\\winsys.dxb")) return false;
+                if (File.Exists(s + "\\player.chr"))
+                {
+                    if (!LoadCharacter(s + "\\player.chr")) return false;
+                }
+                if (File.Exists(s + "\\winsys.dxb"))
+                {
+                    if (!LoadStash(s + "\\winsys.dxb")) return false;
+                }
             }
             return true;
         }
